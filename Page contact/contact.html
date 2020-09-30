@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <form action="" method="POST">
+      <div class="formulaire">
+        <label for="mail"></label>
+        <input
+          type="email"
+          id="mail"
+          name="user_mail"
+          placeholder="Your email"
+        />
+      </div>
+
+      <div class="formulaire">
+        <label for="topic"></label>
+
+        <select name="topicType" id="topic">
+          <option value="">--Please choose a topic--</option>
+          <option value="bug">Bug</option>
+          <option value="features">Suggested features</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="formulaire">
+        <label for="message"></label>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Your message..."
+        ></textarea>
+      </div>
+
+      <div class="formulaire">
+        <button type="submit">
+          <img src="./Images/send-button.png" alt="" />
+          <p class="sendButton">Send !</p>
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
