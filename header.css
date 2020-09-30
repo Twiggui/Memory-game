@@ -1,0 +1,84 @@
+/*CSS reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the navigation menu */
+.topnav-wrapper {
+    width:100%;
+    background-color: rgb(52, 58, 64);
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    /*position:fixed; always keeping the header on top of the page, removable if needed*/
+}
+
+.topnav {
+    overflow: hidden;
+    position: relative; /*we need to set postion as relative to be able to position things in absolute inside it*/
+    width:100%;
+    padding:4px;
+    margin:6px;
+}
+  
+  /* Hide the links inside the navigation menu (except for logo/home) - for mobile */
+.topnav #myLinks {
+    display: none;
+}
+  
+  /* Style navigation menu links - ALL the links inside the .topnav div, including the main title */
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+  
+  /* Style the hamburger menu */
+.topnav a.icon {
+    /*background: black;*/
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+    border: #ddd solid 1px;
+    border-radius:2px;
+}
+  
+  /* Add a grey background color on mouse-over */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+  /* Style the active link (or home/logo) */
+.topnav h1.active > a {
+    font-size: 20px;
+    color: white;
+    width: min-content;
+    white-space: nowrap;  
+}
+
+
+/* Specific breakpoint for the burger menu */
+@media only screen and (min-width: 570px) {
+    /*changing the burger menu*/
+    .topnav #myLinks {
+      display : flex ;
+    }
+  
+    .topnav a.icon {
+      display:none;
+    }
+  
+   .topnav {
+     display: flex ;
+     justify-content: space-between;
+   }
+  }
