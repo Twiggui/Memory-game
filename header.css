@@ -5,16 +5,25 @@
     box-sizing: border-box;
 }
 
+/*defining variables*/
+:root {
+  --background-color-header: rgb(52, 58, 64);
+  --background-color-hover: #ddd;
+  
+  --text-color-main: black;
+  --text-color-header: white;
+}
+
 /* Style the navigation menu */
 .topnav-wrapper {
     width:100%;
-    background-color: rgb(52, 58, 64);
+    background-color: var(--background-color-header,rgb(52, 58, 64));
     overflow: hidden;
     display:flex;
     align-items: center;
     justify-content: center;
 
-    /*position:fixed; always keeping the header on top of the page, removable if needed*/
+    /*position:fixed; always keeping the header on top of the page*/
 }
 
 .topnav {
@@ -32,7 +41,7 @@
   
   /* Style navigation menu links - ALL the links inside the .topnav div, including the main title */
 .topnav a {
-    color: white;
+    color: var(--text-color-header, white);
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -41,26 +50,25 @@
   
   /* Style the hamburger menu */
 .topnav a.icon {
-    /*background: black;*/
     display: block;
     position: absolute;
     right: 5px;
     top: 5px;
 
-    border: #ddd solid 1px;
+    border: var(--text-color-header) solid 1px;
     border-radius:2px;
 }
   
   /* Add a grey background color on mouse-over */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color:var(--background-color-hover);
+    color: var(--text-color-main);
 }
   
   /* Style the active link (or home/logo) */
 .topnav h1.active > a {
     font-size: 20px;
-    color: white;
+    color: var(--text-color-header);
     width: min-content;
     white-space: nowrap;  
 }
