@@ -56,20 +56,6 @@ img:hover{
     color: rgb(73, 73, 73);
 }
 
-.p-footer{
-    text-align: center;
-    font-size: 16px;
-    color: white;
-    padding: 15px 0;
-}
-
-footer{
-    background-color: rgb(52, 58, 64);
-}
-
-.aFooter{
-    color: white;
-}
 
 /*@media screen and (max-width: 768px){
     .devTeam{
