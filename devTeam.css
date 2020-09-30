@@ -8,6 +8,7 @@
     color: rgb(0, 0, 0);
 }
 
+
 h2{
     color: red;
     font-size: 25px;
@@ -26,9 +27,8 @@ h2{
 .card{
     margin: 30px;
     border-style: solid;
-    border-radius: 3%;
     border-color: lightgray;
-    transition : border-color 0.3s;
+    border-width: 2px;
 }
 
 
@@ -39,21 +39,12 @@ h3{
     margin: 10px;
 }
 
-img{
-    opacity: 0.2;
-    transition: opacity 0.3s;
-}
-
-img:hover{
-    opacity: 1;
+.spanAge{
+    color: rgb(73, 73, 73);
 }
 
 .card:hover{
-    border-color: gold;
-}
-
-.spanAge{
-    color: rgb(73, 73, 73);
+    border-color: goldenrod;
 }
 
 
