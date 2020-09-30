@@ -73,6 +73,10 @@
     white-space: nowrap;  
 }
 
+.topnav h1.active > a:hover {
+  color: var(--text-color-main);
+}
+
 
 /* Specific breakpoint for the burger menu */
 @media only screen and (min-width: 570px) {
