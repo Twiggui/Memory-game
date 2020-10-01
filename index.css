@@ -171,3 +171,7 @@ div p {
   /* border: 1px solid var(--background-color-header); */
   box-shadow: 0 0 3px var(--background-color-header);
 }
+
+footer{
+  margin-top: 15px;
+}
