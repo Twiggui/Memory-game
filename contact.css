@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: roboto;
+}
+
+/*defining variables*/
+:root {
+  --background-color-header: rgb(52, 58, 64);
+  --background-color-hover: #ddd;
+
+  --text-color-main: black;
+  --text-color-header: white;
+}
+
+/* Mise en forme du header __________________________________________________________________ */
+
+/* Style the navigation menu */
+.topnav-wrapper {
+  width: 100%;
+  background-color: var(--background-color-header, rgb(52, 58, 64));
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*position:fixed; always keeping the header on top of the page*/
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative; /*we need to set postion as relative to be able to position things in absolute inside it*/
+  width: 100%;
+  padding: 4px;
+  margin: 6px;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) - for mobile */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links - ALL the links inside the .topnav div, including the main title */
+.topnav a {
+  color: var(--text-color-header, white);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+
+  border: var(--text-color-header) solid 1px;
+  border-radius: 2px;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: var(--background-color-hover);
+  color: var(--text-color-main);
+}
+
+/* Style the active link (or home/logo) */
+.topnav h1.active > a {
+  font-size: 20px;
+  color: var(--text-color-header);
+  width: min-content;
+  white-space: nowrap;
+}
+
+/* Specific breakpoint for the burger menu */
+@media only screen and (min-width: 570px) {
+  /*changing the burger menu*/
+  .topnav #myLinks {
+    display: flex;
+  }
+
+  .topnav a.icon {
+    display: none;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* Mise en forme du header __________________________________________________________________ */
+
+form {
+  width: 80%;
+  padding: 20px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+form div {
+  margin-top: 1em;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit - padding and border are included in the width and height*/
+  -moz-box-sizing: border-box; /* Firefox, other Gecko - padding and border are included in the width and height */
+  box-sizing: border-box; /* Opera/IE 8+  - padding and border are included in the width and height*/
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  padding: 10px;
+}
+
+button {
+  padding: 5px;
+  width: 100px;
+  background-color: var(--background-color-header);
+}
+
+button p {
+  color: var(--text-color-header);
+}
+
+button img {
+  width: 20px;
+  margin-right: 30px;
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.sendButton {
+  display: inline-block;
+}
