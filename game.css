@@ -87,3 +87,9 @@ ul li {
   width: 100px;
   height: 100px;
 }
+.replay:focus {
+  outline: none;
+}
+.replay:hover {
+  cursor: pointer;
+}
