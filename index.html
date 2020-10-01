@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="topnav-wrapper">
+      <div class="topnav">
+        <!--Our main title, always links to the index/home page-->
+        <h1 class="active"><a href="#">HighFiveMemo</a></h1>
+        <!--h1 for SEO-->
+
+        <!-- Navigation links (hidden by default on mobile view, only seen when clicking on the burger menu -->
+        <div id="myLinks">
+          <a href="#scoreboard">Scores</a>
+          <a href="#contact">Contact</a>
+          <a href="#credits">Dev Team</a>
+        </div>
+
+        <!-- Burger menu -->
+        <a href="javascript:void(0);" class="icon">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="toggle-bar"></div>
+      <section>
+        <label for="pseudo">Enter your pseudo</label> :
+        <input type="text" name="pseudo" />
+      </section>
+
+      <div class="Rules">
+        <label for="rules_games">Rules of the game :</label><br />
+        <textarea class="rules">
+ 
+You have cards face down. The aim is to find the even cards within the time limit. Click on a card to flip it over and find its twin.
+
+If you find the pair, the cards remain face up and you can continue. If you make a mistake, the last 2 cards turned over become hidden again.
+
+Increase the difficulty if you want to add pairs of cards.
+
+Your score will be calculated according to the level of difficulty and the time taken.
+        </textarea>
+      </div>
+
+      <div class="settings">
+        <p class="settings_title">Select a difficulty mode :</p>
+        <br />
+        <div>
+          <input type="radio" class="easy" name="difficulty" />
+          <label for="easy">Easy</label>
+        </div>
+
+        <br />
+
+        <div>
+          <input type="radio" class="normal" name="difficulty" />
+          <label for="normal">Normal</label>
+        </div>
+
+        <br />
+
+        <div>
+          <input type="radio" class="hard" name="difficulty" />
+          <label for="hard">Hard</label>
+        </div>
+      </div>
+
+      <div class="button">
+        <input type="button" class="play" name="play" value="Let's Play !!" />
+      </div>
+    </main>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
