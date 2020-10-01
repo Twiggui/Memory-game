@@ -128,7 +128,7 @@ section input {
   border-radius: 5px;
   border-color: black;
   box-shadow: 2px 2px 2px grey;
-  width: 50%;
+  width: 100%;
   height: 300px;
   padding: 10px;
   -webkit-box-sizing: border-box;
@@ -143,6 +143,8 @@ div p {
 }
 .Rules {
   font-weight: bold;
+  width: 80%;
+
 }
 .settings_title {
   margin-bottom: 0px;
@@ -175,3 +177,22 @@ div p {
 footer{
   margin-top: 15px;
 }
+.central {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.video {
+  margin-right: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .video {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rules {
+    width: 80%;
+  }
+
