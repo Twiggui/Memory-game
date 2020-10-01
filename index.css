@@ -123,14 +123,15 @@ section input {
   box-shadow: 2px 2px 2px grey;
 }
 .rules {
-  margin: 10px 0px 10px 10px;
+  margin: 10px 20px 0px 10px;
   border-style: solid;
   border-radius: 5px;
   border-color: black;
   box-shadow: 2px 2px 2px grey;
-  width: 90%;
+  width: 50%;
   height: 300px;
   padding: 10px;
+  -webkit-box-sizing: border-box;
 }
 div label {
   margin: 10px 0px 20px 10px;
