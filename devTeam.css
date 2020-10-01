@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.4rem;
+    letter-spacing:0.02rem;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+
+h2{
+    color: red;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.devTeam{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 30px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 2px;
+}
+
+
+h3{
+    font-size: 15px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    width: 300px;
+    padding: 15px;
+}
+
+.card:hover{
+    border-color: goldenrod;
+}
+
+
+@media screen and (max-width: 480px){
+    h3{
+        width: 200px;
+    }
+}

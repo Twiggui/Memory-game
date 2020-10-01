@@ -1,0 +1,115 @@
+/*CSS reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color-header: rgb(52, 58, 64);
+    --background-color-hover: #ddd;
+    --background-color-sections: rgb(224, 224, 224);
+    
+    --text-color-main: black;
+    --text-color-header: white;
+
+    --text-font: Roboto, Arial;
+  }
+  
+
+body {
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: 400; /*normal*/
+}
+
+.content-wrapper {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+    width:100%;
+}
+
+.content-wrapper h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+
+    margin-top: 15px;
+}
+
+.scoreboard {
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--background-color-sections);
+    width:40%;
+    border: 4px solid var(--background-color-header);
+    border-radius: 10px;
+    margin-top: 25px;
+
+    box-shadow: 5px 5px 5px rgb(212, 205, 205);
+
+}
+
+.score-wrapper {
+    display:flex;
+    width:99%;
+    justify-content: center;
+    /*border: 1px solid black;*/
+    padding: 0.35em 0;
+    font-size: 18px;
+
+    /* border-radius: 5px; */
+}
+
+.score-wrapper:nth-of-type(1) { /*writing the first score bigger because it's the record*/
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(131, 131, 131), 
+                2px 2px  rgb(131, 131, 131), 
+                3px 3px  rgb(131, 131, 131);
+}
+
+.score-wrapper p {
+    padding: 3px;
+}
+
+.score-wrapper:nth-of-type(2n) {
+    background-color: var(--background-color-header);
+    color:var(--text-color-header);
+}
+
+.ranking {
+    display:flex;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: var(--background-color-header);
+    text-align:center;
+    color: var(--text-color-header);
+    padding:5px;
+    border-radius: 5px;
+    margin-top:25px;
+
+}
+
+.button:hover {
+    position: relative;
+    top:-3px;
+    background-color: var(--background-color-hover);
+    color: var(--text-color-main);
+    /* border: 1px solid var(--background-color-header); */
+    box-shadow: 0 0 3px var(--background-color-header);
+}
+
+.button a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    padding:4px;
+}

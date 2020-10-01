@@ -19,4 +19,3 @@ window.addEventListener('resize', function () {
         x.style.display = "none";
     }
 });
-

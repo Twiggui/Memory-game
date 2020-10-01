@@ -1,0 +1,19 @@
+.p-footer{
+    text-align: center;
+    font-size: 16px;
+    color: rgb(190, 190, 190);
+    padding: 15px 0;
+}
+
+footer{
+    background-color: rgb(52, 58, 64);
+}
+
+.aFooter{
+    color: white;
+}
+
+.aFooter:hover{
+    transform: scale(1.03);
+    display: inline-block;
+}
