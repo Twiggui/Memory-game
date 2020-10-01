@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #363636;
+  padding-left: 0px;
+  padding-right: 5px;
+  margin-bottom: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 60px;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  padding: 10px;
+}
+
+ul li {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(248, 242, 242);
+}
+
+/*mon timer*/
+
+.timer {
+  margin: auto;
+  display: inline-block;
+  border: solid 1px black;
+  padding: 10px;
+}
+.timersection {
+  text-align: center;
+  padding: 10px;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.jeux {
+  /*height: calc(100vh - 60px - 60px - 150px);*/
+  display: flex;
+}
+
+.jeux img {
+  display: block;
+  max-width: 30vw;
+}
+
+.jeux .card {
+  margin: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.jeuximgfacile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*jeux en mode normal*/
+
+.replaysection {
+  height: 150px;
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.replay {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
