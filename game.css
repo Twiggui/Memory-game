@@ -71,7 +71,6 @@ ul li {
 } */ /*commenté car il n'y a plus d'img dans le doc*/
 
 .jeux .card {
-  margin: 10px;
   /* border: solid 1px black; */
   border-radius: 5px;
 }
@@ -99,6 +98,55 @@ ul li {
   max-width: 100%;
   max-height: 100%;
 }
+
+/*code to turn the cards*/
+/*/////////////////////////////////////////////////////////////////////*/
+
+.scene {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  border: 1px solid #CCC;
+
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card_face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card_face-front {
+  /* background: red; */
+}
+
+.card_face-back {
+  /* background: blue; */
+  transform: rotateY(180deg);
+}
+
+/*/////////////////////////////////////////////////////////////////////*/
+
 
 /*jeux en mode normal*/
 

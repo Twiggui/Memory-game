@@ -29,7 +29,7 @@ for (let i = 0; i < nbPairs; i += 1) {
     arrayToShuffle.push(valueToPush);
 }
 
-console.log(arrayToShuffle);
+// console.log(arrayToShuffle);
 
 //HERE: use the shuffle function
 // const arrayImagesUrl = shuffle(arrayToShuffle);
@@ -53,14 +53,25 @@ function createCard() {
 
         let cardFrontElt = document.createElement("div");
         cardFrontElt.classList.add("card_face", "card_face-front");
-        cardFrontElt.style.backgroundImage = `url(${imageUrl})`;
+        cardFrontElt.style.backgroundColor = "black";
         cardElt.appendChild(cardFrontElt);
 
         let cardBackElt = document.createElement("div");
         cardBackElt.classList.add("card_face", "card_face-back");
-        cardBackElt.style.backgroundColor = "black";
+        cardBackElt.style.backgroundImage = `url(${imageUrl})`;
         cardElt.appendChild(cardBackElt);
     }
 }
 
 createCard();
+
+//turning cards on click
+let cards = document.querySelectorAll('.card');
+console.log(cards);
+
+for (let card of cards) {
+    console.log(card);
+    card.addEventListener('click', function () {
+        card.classList.toggle('is-flipped');
+    });
+}
