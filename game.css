@@ -1,6 +1,19 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text-font);
+}
+
+:root {
+  --background-color-header: rgb(52, 58, 64);
+  --background-color-hover: #ddd;
+  --background-color-sections: rgb(224, 224, 224);
+
+  --text-color-main: black;
+  --text-color-header: white;
+
+  --text-font: Roboto, Arial;
 }
 
 nav {
