@@ -52,18 +52,7 @@ h3{
     }
 }
 
-.card{
-    opacity: 0;
-}
-
-.card{
-    animation: 0.8s 0.1s 1 forwards anim;
-}
-    
-@keyframes anim{
-    0%{
-    opacity: 0;
-    transform : rotateY(180deg) rotateX(180deg);}
-    100%{
-    opacity: 1;}
+.carousel-slide{
+    display: flex;
+    justify-content: center;
 }
