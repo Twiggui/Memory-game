@@ -24,19 +24,19 @@
 
 /*defining variables*/
 :root {
---background-color-header: rgb(52, 58, 64);
---background-color-hover: #ddd;
+  --background-color-header: rgb(52, 58, 64);
+  --background-color-hover: #ddd;
 
---text-color-main: black;
---text-color-header: white;
+  --text-color-main: black;
+  --text-color-header: white;
 }
 
 /* Style the navigation menu */
 .topnav-wrapper {
-  width:100%;
-  background-color: var(--background-color-header,rgb(52, 58, 64));
+  width: 100%;
+  background-color: var(--background-color-header, rgb(52, 58, 64));
   overflow: hidden;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -46,9 +46,9 @@
 .topnav {
   overflow: hidden;
   position: relative; /*we need to set postion as relative to be able to position things in absolute inside it*/
-  width:100%;
-  padding:4px;
-  margin:6px;
+  width: 100%;
+  padding: 4px;
+  margin: 6px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) - for mobile */
@@ -73,12 +73,12 @@
   top: 5px;
 
   border: var(--text-color-header) solid 1px;
-  border-radius:2px;
+  border-radius: 2px;
 }
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
-  background-color:var(--background-color-hover);
+  background-color: var(--background-color-hover);
   color: var(--text-color-main);
 }
 
@@ -87,32 +87,31 @@
   font-size: 20px;
   color: var(--text-color-header);
   width: min-content;
-  white-space: nowrap;  
+  white-space: nowrap;
 }
 
 .topnav h1.active > a:hover {
-color: var(--text-color-main);
+  color: var(--text-color-main);
 }
-
 
 /* Specific breakpoint for the burger menu */
 @media only screen and (min-width: 570px) {
   /*changing the burger menu*/
   .topnav #myLinks {
-    display : flex ;
+    display: flex;
   }
 
   .topnav a.icon {
-    display:none;
+    display: none;
   }
 
- .topnav {
-   display: flex ;
-   justify-content: space-between;
- }
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 section {
-  display = flex;
+  display: flex;
   font-weight: bold;
   margin: 20px 0px 20px 10px;
 }
@@ -128,10 +127,10 @@ section input {
   border-radius: 5px;
   border-color: black;
   box-shadow: 2px 2px 2px grey;
-  width: 50%;
+  width: 100%;
   height: 300px;
   padding: 10px;
-  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 div label {
   margin: 10px 0px 20px 10px;
@@ -143,11 +142,14 @@ div p {
 }
 .Rules {
   font-weight: bold;
+  width: 80%;
 }
 .settings_title {
   margin-bottom: 0px;
 }
-.easy, .normal, .hard {
+.easy,
+.normal,
+.hard {
   margin-left: 20px;
 }
 .button {
@@ -159,15 +161,74 @@ div p {
   color: var(--text-color-header);
   padding: 20px 20px 20px 20px;
   border-radius: 5px;
-  margin-top:25px;
-
+  margin-top: 25px;
 }
 
 .play:hover {
   position: relative;
-  top:-3px;
+  top: -3px;
   background-color: var(--background-color-hover);
   color: var(--text-color-main);
   /* border: 1px solid var(--background-color-header); */
   box-shadow: 0 0 3px var(--background-color-header);
+}
+
+footer {
+  margin-top: 15px;
+}
+.central {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.video {
+  margin-right: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .video {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rules {
+    width: 80%;
+  }
+}
+.button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color-header);
+  text-align: center;
+  color: var(--text-color-header);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 25px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button:hover {
+  position: relative;
+  top: -3px;
+  background-color: var(--background-color-hover);
+  color: var(--text-color-main);
+  /* border: 1px solid var(--background-color-header); */
+  box-shadow: 0 0 3px var(--background-color-header);
+}
+
+.button a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  padding: 4px;
+}
+
+.formLetsPlay {
+  display: flex;
+  justify-content: center;
 }

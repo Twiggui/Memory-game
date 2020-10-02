@@ -1,16 +1,19 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: roboto;
+  font-family: var(--text-font);
 }
 
 /*defining variables*/
 :root {
   --background-color-header: rgb(52, 58, 64);
   --background-color-hover: #ddd;
+  --background-color-sections: rgb(224, 224, 224);
 
   --text-color-main: black;
   --text-color-header: white;
+
+  --text-font: Roboto, Arial;
 }
 
 /* Mise en forme du header __________________________________________________________________ */
@@ -92,14 +95,18 @@
 }
 /* Mise en forme du header __________________________________________________________________ */
 
+body {
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: 400; /*normal*/
+}
+
 form {
   width: 80%;
   padding: 20px;
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #ccc;
-  border-radius: 1em;
   max-width: 800px;
 }
 
@@ -129,9 +136,13 @@ textarea {
 }
 
 button {
-  padding: 5px;
-  width: 100px;
   background-color: var(--background-color-header);
+  text-align: center;
+  color: var(--text-color-header);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 button p {
