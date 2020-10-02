@@ -52,35 +52,7 @@ h3{
     }
 }
 
-img{
-    opacity: 1;
-}
-
-.img1{
-    animation: 1.5s 0.5s 1 anim;
-}
-    
-@keyframes anim{
-    0%{
-    opacity: 1;}
-    50%{
-        opacity: 0.3;}
-    100%{
-    opacity: 1;}
-}
-    
-.img2{
-    animation: 1.5s 2s 1 anim;
-}
-
-.img3{
-    animation: 1.5s 3.5s 1 anim;
-}
-
-.img4{
-    animation: 1.5s 5s 1 anim;
-}
-
-.img5{
-    animation: 1.5s 6.5s 1 anim;
+.carousel-slide{
+    display: flex;
+    justify-content: center;
 }

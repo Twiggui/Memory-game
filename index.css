@@ -195,3 +195,40 @@ footer {
     width: 80%;
   }
 }
+.button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color-header);
+  text-align: center;
+  color: var(--text-color-header);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 25px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button:hover {
+  position: relative;
+  top: -3px;
+  background-color: var(--background-color-hover);
+  color: var(--text-color-main);
+  /* border: 1px solid var(--background-color-header); */
+  box-shadow: 0 0 3px var(--background-color-header);
+}
+
+.button a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  padding: 4px;
+}
+
+.formLetsPlay {
+  display: flex;
+  justify-content: center;
+}
