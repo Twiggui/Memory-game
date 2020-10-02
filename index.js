@@ -26,15 +26,19 @@ window.addEventListener('resize', function () {
 //getting the selected level and stocking in session storage
 
 let radioButtons = document.getElementsByClassName("difficulty");
-console.log(radioButtons);
-let difficultyLevel = "";
+let playButton = document.querySelector(".button a");
 
-for (let radioButton of radioButtons) {
-  if (radioButton.checked) {
-    difficultyLevel = radioButton.value;
-    console.log(difficultyLevel);
+playButton.addEventListener("click", function () {
+  let difficultyLevel = "";
+
+  for (let radioButton of radioButtons) {
+    if (radioButton.checked) {
+      difficultyLevel = radioButton.value;
+    }
   }
-}
 
-sessionStorage.setItem("difficultylevel", difficultyLevel);
+  sessionStorage.setItem("difficultyLevel", difficultyLevel);
+})
+
+
 
