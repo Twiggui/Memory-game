@@ -52,16 +52,29 @@ ul li {
   display: flex;
 }
 
-.jeux img {
+/* .jeux img {
   display: block;
   max-width: 30vw;
-}
+} */ /*commenté car il n'y a plus d'img dans le doc*/
 
 .jeux .card {
   margin: 10px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   border-radius: 5px;
 }
+
+/*ajouts pour l'affichage des cartes*/
+.card_face {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  max-width: 30vw;
+
+  border-radius: 5px;
+}
+
 .jeuximgfacile {
   display: flex;
   justify-content: center;
