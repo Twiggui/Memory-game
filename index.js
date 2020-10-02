@@ -1,3 +1,4 @@
+//handling the burger menu
 function displayBurger() {
   let x = document.getElementById('myLinks');
   if (x.style.display === 'block') {
@@ -34,11 +35,9 @@ playButton.addEventListener("click", function () {
   for (let radioButton of radioButtons) {
     if (radioButton.checked) {
       difficultyLevel = radioButton.value;
+      console.log(difficultyLevel);
     }
   }
 
   sessionStorage.setItem("difficultyLevel", difficultyLevel);
-})
-
-
-
+});
