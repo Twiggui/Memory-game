@@ -196,13 +196,3 @@ footer{
     width: 80%;
   }
 }
-
-.buttonLetsPlay{
-  font-size: 20px;
-  padding: 5px;
-}
-
-.formLetsPlay{
-display: flex;
-justify-content: center;
-}
