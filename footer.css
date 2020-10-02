@@ -17,3 +17,21 @@ footer{
     transform: scale(1.03);
     display: inline-block;
 }
+
+/* making the footer stick to the bottom of the page, you need to wrap the rest in a div.page*/
+/* html, body {
+    height: 100%;
+}
+
+body {
+display: flex;
+flex-direction: column;
+}
+
+.page {
+flex: 1 0 auto;
+}
+
+footer {
+flex-shrink: 0;
+} */
