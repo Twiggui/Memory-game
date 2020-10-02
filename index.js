@@ -22,3 +22,19 @@ window.addEventListener('resize', function () {
     x.style.display = 'none';
   }
 });
+
+//getting the selected level and stocking in session storage
+
+let radioButtons = document.getElementsByClassName("difficulty");
+console.log(radioButtons);
+let difficultyLevel = "";
+
+for (let radioButton of radioButtons) {
+  if (radioButton.checked) {
+    difficultyLevel = radioButton.value;
+    console.log(difficultyLevel);
+  }
+}
+
+sessionStorage.setItem("difficultylevel", difficultyLevel);
+

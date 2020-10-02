@@ -1,3 +1,10 @@
+// This goes in the second web page:
+// Retrieve in the sessionStorage the value of difficulty selected in the first page
+let difficultyLevel = sessionStorage.getItem('difficultyLevel');
+
+
+//here, create the array i need to pick from
+
 const arrayImagesUrl = ["https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287", "https://placekitten.com/200/287"];
 //les url devront dépendre du niveau de difficulté et il doit y avoir deux fois la même URL à chaque fois
 
