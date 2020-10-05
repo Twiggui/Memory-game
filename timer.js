@@ -1,4 +1,4 @@
-document.getElementById('timer').innerHTML = 000 + ':' + 35;
+document.getElementById('timer').innerHTML = 002 + ':' + 000;
 startTimer();
 
 function startTimer() {
@@ -11,9 +11,11 @@ function startTimer() {
   }
   if (m < 01 && s <= 30) {
     document.getElementById('timer').style.color = 'red';
+    document.getElementById('timer').style.textShadow = 'red';
   }
   if (m < 0) {
     alert('Its Finished');
+    return;
   }
 
   document.getElementById('timer').innerHTML = m + ':' + s;
@@ -24,7 +26,7 @@ function startTimer() {
 function checkSecond(sec) {
   if (sec < 10 && sec >= 0) {
     sec = '0' + sec;
-  } // add zero in front of numbers < 10
+  }
   if (sec < 0) {
     sec = '59';
   }
