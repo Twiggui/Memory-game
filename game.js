@@ -67,10 +67,10 @@ createCard();
 
 //turning cards on click
 let cards = document.querySelectorAll('.card');
-console.log(cards);
+// console.log(cards);
 
 for (let card of cards) {
-    console.log(card);
+    // console.log(card);
     card.addEventListener('click', function () {
         card.classList.toggle('is-flipped');
     });
