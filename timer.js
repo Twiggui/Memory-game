@@ -1,4 +1,4 @@
-document.getElementById('timer').innerHTML = 002 + ':' + 000;
+document.getElementById('timer').innerHTML = 000 + ':' + 040;
 startTimer();
 
 function startTimer() {
