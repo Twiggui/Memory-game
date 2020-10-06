@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="footer.css" />
   </head>
 
-  <body>
-    <header class="topnav-wrapper">
-      <div class="topnav">
-        <!--Our main title, always links to the index/home page-->
-        <h1 class="active"><a href="index.html">HighFiveMemo</a></h1>
-        <!--h1 for SEO-->
+<head>
+  <meta charset="utf-8" />
+  <title>Hig Five Memo - Home</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
 
         <!-- Navigation links (hidden by default on mobile view, only seen when clicking on the burger menu -->
         <div id="myLinks">
@@ -26,10 +27,12 @@
           <a href="devTeam.html">Dev Team</a>
         </div>
 
-        <!-- Burger menu -->
-        <a href="javascript:void(0);" class="icon">
-          <i class="fa fa-bars"></i>
-        </a>
+      <!-- Navigation links (hidden by default on mobile view, only seen when clicking on the burger menu -->
+      <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="scoreboard.html">Scores</a>
+        <a href="contact.html">Contact</a>
+        <a href="devTeam.html">Dev Team</a>
       </div>
     </header>
     <main>
@@ -70,6 +73,7 @@
           ></iframe>
         </div>
       </div>
+    </div>
 
       <div class="settings">
         <p class="settings_title"><span class="span-8">Select a difficulty mode :</span></p>
@@ -79,14 +83,22 @@
           <label for="easy" class="span-9">Easy</label>
         </div>
 
-        <br />
+    <div class="settings">
+      <p class="settings_title">Select a difficulty mode :</p>
+      <br />
+      <div>
+        <input type="radio" class="difficulty" name="difficulty" value="easy" />
+        <label for="easy">Easy</label>
+      </div>
 
-        <div>
-          <input type="radio" class="normal" name="difficulty" />
-          <label for="normal">Normal</label>
-        </div>
+      <br />
 
-        <br />
+      <div>
+        <input type="radio" class="difficulty" name="difficulty" value="normal" />
+        <label for="normal">Normal</label>
+      </div>
+
+      <br />
 
         <div>
           <input type="radio" class="hard" name="difficulty" />

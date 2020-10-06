@@ -1,3 +1,4 @@
+//handling the burger menu
 function displayBurger() {
   let x = document.getElementById('myLinks');
   if (x.style.display === 'block') {
@@ -61,3 +62,20 @@ function changeLang(){
     };};
 
 toggleSpace.addEventListener("click", changeLang);
+//getting the selected level and stocking in session storage
+
+let radioButtons = document.getElementsByClassName("difficulty");
+let playButton = document.querySelector(".button a");
+
+playButton.addEventListener("click", function () {
+  let difficultyLevel = "";
+
+  for (let radioButton of radioButtons) {
+    if (radioButton.checked) {
+      difficultyLevel = radioButton.value;
+      console.log(difficultyLevel);
+    }
+  }
+
+  sessionStorage.setItem("difficultyLevel", difficultyLevel);
+});
