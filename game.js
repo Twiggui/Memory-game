@@ -141,11 +141,11 @@ for (let i = 0; i < cardTable.length; i += 1) {
 
 //this will have to be added in the "winning" event of the game
 let currentTime = new Date().getTime();
+
 // console.log(currentTime);
 
 let score = Math.floor(Math.random() * 1500); //here we'll have to get the score from the score calculating function
 let score_time = score + "-" + currentTime;
-// console.log(score_time);
 
 // localStorage.clear();
 

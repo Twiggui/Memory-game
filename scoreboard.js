@@ -42,10 +42,15 @@ console.log(listObjectsScores);
 //creating an array with the five highest score
 let nbScores = 5; //number of scores we want to inject in the page, that way it's easier to change later on
 let arrayScoreElts = document.getElementsByClassName("score");
+let arrayDatesElts = document.getElementsByClassName("date");
 
 if (listObjectsScores.length >= nbScores) {
     for (let i = 0; i < nbScores; i += 1) {
         arrayScoreElts[i].innerHTML = listObjectsScores[i].score;
+
+        let d = new Date(parseInt(listObjectsScores[i].time));
+        let date = d.toLocaleDateString() + '-' + d.getHours() + ":" + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
+        arrayDatesElts[i].innerHTML = date;
     }
 } else {
     for (let i = 0; i < listObjectsScores.length; i += 1) {
