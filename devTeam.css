@@ -53,7 +53,11 @@ h3{
 }
 
 .card{
-    animation: 1s 0s 1 forwards anim;
+    opacity: 0;
+}
+
+.card{
+    animation: 0.8s 0.1s 1 forwards anim;
 }
     
 @keyframes anim{
@@ -62,14 +66,4 @@ h3{
     transform : rotateY(180deg) rotateX(180deg);}
     100%{
     opacity: 1;}
-}
-
-.span-couille{
-    text-decoration: line-through;
-    text-decoration-color: red;
-}
-
-.funfact{
-    font-style: italic;
-    color: rgb(117, 117, 117);
 }
