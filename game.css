@@ -45,7 +45,7 @@ ul li {
   color: rgb(248, 242, 242);
 }
 
-/*mon timer*/
+/*timer*/
 
 #timer {
   margin: auto;
@@ -66,22 +66,10 @@ ul li {
   font-weight: bold;
 }
 
-.jeux {
-  /*height: calc(100vh - 60px - 60px - 150px);*/
-  display: flex;
-}
 
-.jeux img {
-  display: block;
-  max-width: 30vw;
-}
 
-.jeux .card {
-  margin: 10px;
-  border: solid 1px black;
-  border-radius: 5px;
-}
-.jeuximgfacile {
+/*this is the CSS from Guillem flipping and matching cards code*/
+.conteneur {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,6 +81,55 @@ ul li {
   max-height: 100%;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 30vw;
+  position: relative;
+  margin: 10px;
+  cursor: url(images/high-five.png),pointer;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card img {
+  height: 30vw;
+  width: 30vw;
+  position: absolute;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face-front {
+  transform: rotateY(180deg);
+}
+
+.disabled,
+.matched {
+  pointer-events: none;
+}
+
+
+
+.jeux img {
+  display: block;
+  max-width: 30vw;
+  border-radius: 5px;
+} 
+
+.jeux .card {
+  border-radius: 5px;
+}
+
+
 /*jeux en mode normal*/
 
 .replaysection {
@@ -102,6 +139,7 @@ ul li {
   padding-bottom: 50px;
 }
 .replay {
+  cursor: url(images/high-five.png), pointer;
   border-radius: 100%;
   width: 100px;
   height: 100px;
@@ -110,5 +148,5 @@ ul li {
   outline: none;
 }
 .replay:hover {
-  cursor: pointer;
+  cursor: url(images/high-five.png), pointer;
 }

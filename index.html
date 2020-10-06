@@ -1,101 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Titre de la page</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="footer.css" />
-  </head>
 
-  <body>
-    <header class="topnav-wrapper">
-      <div class="topnav">
-        <!--Our main title, always links to the index/home page-->
-        <h1 class="active"><a href="index.html">HighFiveMemo</a></h1>
-        <!--h1 for SEO-->
+<head>
+  <meta charset="utf-8" />
+  <title>Hig Five Memo - Home</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
 
-        <!-- Navigation links (hidden by default on mobile view, only seen when clicking on the burger menu -->
-        <div id="myLinks">
-          <a href="index.html">Home</a>
-          <a href="scoreboard.html">Scores</a>
-          <a href="contact.html">Contact</a>
-          <a href="devTeam.html">Dev Team</a>
-        </div>
+<body>
+  <header class="topnav-wrapper">
+    <div class="topnav">
+      <!--Our main title, always links to the index/home page-->
+      <h1 class="active"><a href="index.html">HighFiveMemo</a></h1>
+      <!--h1 for SEO-->
 
-        <!-- Burger menu -->
-        <a href="javascript:void(0);" class="icon">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </header>
-    <main>
-      <div class="toggle-bar"></div>
-      <section>
-        <label for="pseudo">Enter your pseudo</label> :
-        <input type="text" name="pseudo" />
-      </section>
-
-      <div class="central">
-        <div class="Rules">
-          <label for="rules_games">Rules of the game :</label><br />
-          <p class="rules">
-            You have cards face down. The aim is to find the even cards within
-            the time limit. <br /><br />Click on a card to flip it over and find
-            its twin. If you find the pair, the cards remain face up and you can
-            continue. <br />
-            If you make a mistake, the last 2 cards turned over become hidden
-            again. <br /><br />Increase the difficulty if you want to add pairs
-            of cards. Your score will be calculated according to the level of
-            difficulty and the time taken.
-          </p>
-        </div>
-        <div class="video">
-          <iframe
-            width="400"
-            height="300"
-            src="https://www.youtube.com/embed/cwfURfGS6JA"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+      <!-- Navigation links (hidden by default on mobile view, only seen when clicking on the burger menu -->
+      <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="scoreboard.html">Scores</a>
+        <a href="contact.html">Contact</a>
+        <a href="devTeam.html">Dev Team</a>
       </div>
 
-      <div class="settings">
-        <p class="settings_title">Select a difficulty mode :</p>
-        <br />
-        <div>
-          <input type="radio" class="easy" name="difficulty" />
-          <label for="easy">Easy</label>
-        </div>
+      <!-- Burger menu -->
+      <a href="javascript:void(0);" class="icon">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="toggle-bar"></div>
+    <section>
+      <label for="pseudo">Enter your pseudo</label> :
+      <input type="text" name="pseudo" />
+    </section>
 
-        <br />
-
-        <div>
-          <input type="radio" class="normal" name="difficulty" />
-          <label for="normal">Normal</label>
-        </div>
-
-        <br />
-
-        <div>
-          <input type="radio" class="hard" name="difficulty" />
-          <label for="hard">Hard</label>
-        </div>
+    <div class="central">
+      <div class="Rules">
+        <label for="rules_games">Rules of the game :</label><br />
+        <p class="rules">
+          You have cards face down. The aim is to find the even cards within
+          the time limit. <br /><br />Click on a card to flip it over and find
+          its twin. If you find the pair, the cards remain face up and you can
+          continue. <br />
+          If you make a mistake, the last 2 cards turned over become hidden
+          again. <br /><br />Increase the difficulty if you want to add pairs
+          of cards. Your score will be calculated according to the level of
+          difficulty and the time taken.
+        </p>
       </div>
-    </main>
-    <div class="button"><a href="game.html">Let's Play !!</a></div>
-    <footer>
-      <p class="p-footer">
-        HighFiveMemo by
-        <a href="devTeam.html" class="aFooter">Team HighFive</a> - Website
-        created on Septembre 29, 2020
-      </p>
-    </footer>
-    <script type="text/javascript" src="index.js"></script>
-  </body>
+      <div class="video">
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/cwfURfGS6JA" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+
+    <div class="settings">
+      <p class="settings_title">Select a difficulty mode :</p>
+      <br />
+      <div>
+        <input type="radio" class="difficulty" name="difficulty" value="easy" />
+        <label for="easy">Easy</label>
+      </div>
+
+      <br />
+
+      <div>
+        <input type="radio" class="difficulty" name="difficulty" value="normal" />
+        <label for="normal">Normal</label>
+      </div>
+
+      <br />
+
+      <div>
+        <input type="radio" class="difficulty" name="difficulty" value="hard" />
+        <label for="hard">Hard</label>
+      </div>
+
+  </main>
+
+  <div class="button"><a href="game.html">Let's Play !!</a></div>
+  <footer>
+    <p class="p-footer">
+      HighFiveMemo by
+      <a href="devTeam.html" class="aFooter">Team HighFive</a> - Website
+      created on Septembre 29, 2020
+    </p>
+  </footer>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
 </html>
