@@ -143,7 +143,7 @@ for (let i = 0; i < cardTable.length; i += 1) {
 let currentTime = new Date().getTime();
 // console.log(currentTime);
 
-let score = "1000"; //here we'll have to get the score from the score calculating function
+let score = Math.floor(Math.random() * 1500); //here we'll have to get the score from the score calculating function
 let score_time = score + "-" + currentTime;
 // console.log(score_time);
 
@@ -157,3 +157,5 @@ while (localStorage.getItem(`score${lastItem}`)) {
     lastItem++;
 }
 localStorage.setItem(`score${lastItem}`, score_time);
+console.log(lastItem);
+console.log(score_time);
