@@ -47,17 +47,23 @@ ul li {
 
 /*timer*/
 
-.timer {
+#timer {
   margin: auto;
   display: inline-block;
-  border: solid 1px black;
-  padding: 10px;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: groove 2px black;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px grey;
 }
 .timersection {
   text-align: center;
   padding: 10px;
   height: 60px;
   box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 
