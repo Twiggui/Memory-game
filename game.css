@@ -16,50 +16,6 @@
   --text-font: Roboto, Arial;
 }
 
-/*this is the CSS from Guillem flipping and matching cards code*/
-.conteneur {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.card-face {
-  -webkit-backface-visibility: hidden;
-}
-
-.card img {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card-face-front {
-  transform: rotateY(180deg);
-}
-
-.disabled,
-.matched {
-  pointer-events: none;
-}
-
-
-/***************************************************/
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -89,7 +45,7 @@ ul li {
   color: rgb(248, 242, 242);
 }
 
-/*mon timer*/
+/*timer*/
 
 .timer {
   margin: auto;
@@ -103,111 +59,11 @@ ul li {
   height: 60px;
   box-sizing: border-box;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  height: 30vw;
-  position: relative;
-  margin: 10px;
-  cursor: url(images/high-five.png), pointer;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
 
-.card-face {
-  -webkit-backface-visibility: hidden;
-}
 
-.card img {
-  height: 30vw;
-  width: 30vw;
-  position: absolute;
-}
 
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card-face-front {
-  transform: rotateY(180deg);
-}
-
-.disabled,
-.matched {
-  pointer-events: none;
-}
+/*this is the CSS from Guillem flipping and matching cards code*/
 .conteneur {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-<<<<<<< HEAD
-=======
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  height: 30vw;
-  position: relative;
-  margin: 10px;
-  cursor: url(images/high-five.png), pointer;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.card-face {
-  -webkit-backface-visibility: hidden;
-}
-
-.card img {
-  height: 30vw;
-  width: 30vw;
-  position: absolute;
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card-face-front {
-  transform: rotateY(180deg);
-}
-
-.disabled,
-.matched {
-  pointer-events: none;
-}
-
->>>>>>> feature-shuffle-cards
-/* .jeux img {
-  display: block;
-  max-width: 30vw;
-} */ /*commenté car il n'y a plus d'img dans le doc*/
-
-.jeux .card {
-  /* border: solid 1px black; */
-  border-radius: 5px;
-}
-<<<<<<< HEAD
-
-/*ajouts pour l'affichage des cartes*/
-.card_face {
-  display: block;
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 200px;
-  max-width: 30vw;
-
-  border-radius: 5px;
-}
-
-.jeuximgfacile {
-=======
-.conteneur {
->>>>>>> feature-shuffle-cards
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,55 +73,55 @@ ul li {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-} */
-
-/*code to turn the cards*/
-/*/////////////////////////////////////////////////////////////////////*/
-
-.scene {
-  width: 200px;
-  height: 200px;
-  padding: 5px;
-  border: 1px solid #CCC;
-
-  perspective: 600px;
 }
 
 .card {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 30vw;
+  position: relative;
+  margin: 10px;
+  cursor: url(images/high-five.png),pointer;
   transition: transform 1s;
   transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
+}
+
+.card-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card img {
+  height: 30vw;
+  width: 30vw;
+  position: absolute;
 }
 
 .card.is-flipped {
   transform: rotateY(180deg);
 }
 
-.card_face {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.card_face-front {
-  /* background: red; */
-}
-
-.card_face-back {
-  /* background: blue; */
+.card-face-front {
   transform: rotateY(180deg);
 }
 
-/*/////////////////////////////////////////////////////////////////////*/
+.disabled,
+.matched {
+  pointer-events: none;
+}
+
+
+
+.jeux img {
+  display: block;
+  max-width: 30vw;
+  border-radius: 5px;
+} 
+
+.jeux .card {
+  border-radius: 5px;
+}
 
 
 /*jeux en mode normal*/
