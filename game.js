@@ -139,3 +139,21 @@ for (let i = 0; i < cardTable.length; i += 1) {
 }
 
 
+//this will have to be added in the "winning" event of the game
+let currentTime = new Date().getTime();
+// console.log(currentTime);
+
+let score = "1000"; //here we'll have to get the score from the score calculating function
+let score_time = score + "-" + currentTime;
+// console.log(score_time);
+
+// localStorage.clear();
+
+let lastItem = 0;
+
+while (localStorage.getItem(`score${lastItem}`)) {
+    console.log(lastItem);
+    console.log(score_time);
+    lastItem++;
+}
+localStorage.setItem(`score${lastItem}`, score_time);
