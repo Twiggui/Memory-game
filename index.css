@@ -230,17 +230,17 @@ footer {
   justify-content: center;
 }
 
-.toggle-bar{
+.toggle-bar {
   display: flex;
   width: fit-content;
   justify-content: space-around;
 }
 
-.toggle-lang{
+.toggle-lang {
   font-size: 16px;
 }
 
-.toggle-space{
+.toggle-space {
   width: 35px;
   background-color: gray;
   margin-left: 5px;
@@ -250,14 +250,14 @@ footer {
   justify-content: flex-start;
 }
 
-.toggle-button{
-  background-color:black;
+.toggle-button {
+  background-color: black;
   width: 20px;
   height: 100%;
   border-radius: 25%;
 }
 
-.line-toggle-bar{
+.line-toggle-bar {
   width: auto;
   display: flex;
   justify-content: flex-end;
@@ -265,6 +265,6 @@ footer {
   margin-right: 10px;
 }
 
-.span-2{
+.span-2 {
   margin-right: 8px;
 }
