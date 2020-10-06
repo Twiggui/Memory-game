@@ -232,3 +232,42 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+.toggle-bar{
+  display: flex;
+  width: fit-content;
+  justify-content: space-around;
+}
+
+.toggle-lang{
+  font-size: 16px;
+}
+
+.toggle-space{
+  width: 35px;
+  background-color: gray;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 25%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.toggle-button{
+  background-color:black;
+  width: 20px;
+  height: 100%;
+  border-radius: 25%;
+}
+
+.line-toggle-bar{
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.span-2{
+  margin-right: 8px;
+}
