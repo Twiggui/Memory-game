@@ -44,10 +44,10 @@ listObjectsScores.sort(compare); //the array is sorted depending on the score
 //calculating the ranking for the current (latest) score and injecting a sentence into the HTML
 let rankingCurrentScore = listObjectsScores.findIndex(i => i.time === currentScoreObject.time);;
 let currentScoreElt = document.querySelector(".currentScore");
-currentScoreElt.innerHTML = `You have a score of <span>${currentScoreObject.score}</span> points and your rank is: <span>${rankingCurrentScore + 1}</span> (on a total of ${listObjectsScores.length})`;
+currentScoreElt.innerHTML = `Latest score <span>${currentScoreObject.score}</span> points for a rank of <span>${rankingCurrentScore + 1}</span> (on a total of ${listObjectsScores.length})`;
 
 //creating an array with the five highest score
-let nbScores = 5; //number of scores we want to inject in the page, that way it's easier to change later on
+let nbScores = 10; //number of scores we want to inject in the page, that way it's easier to change later on
 let arrayScoreElts = document.getElementsByClassName("score");
 let arrayDatesElts = document.getElementsByClassName("date");
 
