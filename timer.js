@@ -1,4 +1,4 @@
-document.getElementById('timer').innerHTML = 000 + ':' + 040;
+document.getElementById('timer').innerHTML = 010 + ':' + 040;
 startTimer();
 
 function startTimer() {
@@ -14,13 +14,17 @@ function startTimer() {
     document.getElementById('timer').style.textShadow = 'red';
   }
   if (m < 0) {
-    alert('Its Finished');
+    /*Popup Loose*/
+    let overlayPopupLoose = document.querySelector('.popupLoose');
+    overlayPopupLoose.style.display = 'block';
     return;
   }
 
   document.getElementById('timer').innerHTML = m + ':' + s;
   // console.log(m);
-  setTimeout(startTimer, 1000);
+  if (!document.querySelector('body').classList.contains('winner')) {
+    setTimeout(startTimer, 1000);
+  }
 }
 
 function checkSecond(sec) {
@@ -32,3 +36,7 @@ function checkSecond(sec) {
   }
   return sec;
 }
+const buttonCroixLoose = document.querySelector('.close-loose');
+buttonCroixLoose.addEventListener('click', () => {
+  document.location.reload(true);
+});

@@ -145,12 +145,28 @@ for (let i = 0; i < cardTable.length; i += 1) {
         overlayPopupWin.style.display = 'block';
         let finalMove = document.querySelector('.finalMove');
         finalMove.innerHTML = `Tu as gagné en ${nbDeCoups} coups`;
+        document.querySelector('body').classList.add('winner');
         /*        let totalTime = document.querySelector('.totalTime');
         /*  totalTime.innerHTML = `${}`; */
       }
     }, 1000);
   });
 }
+
+/* button pou fermer la page*/
+
+const buttonCroix = document.querySelector('.close-win');
+buttonCroix.addEventListener('click', () => {
+  let overlayPopupWin = document.querySelector('.popupWin');
+  overlayPopupWin.style.display = 'none';
+});
+
+/*reload la page avec button replay*/
+
+const replayGame = document.querySelector('.replay');
+replayGame.addEventListener('click', () => {
+  document.location.reload(true);
+});
 
 //this will have to be added in the "winning" event of the game
 let currentTime = new Date().getTime();
