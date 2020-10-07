@@ -24,6 +24,7 @@ window.addEventListener('resize', function () {
   }
 });
 
+
 let toggleSpace = document.querySelector(".toggle-space");
 
 function changeLang() {
