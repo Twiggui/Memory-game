@@ -9,20 +9,23 @@ while (localStorage.getItem(`score${lastItem}`)) { //we check all the the existi
 }
 
 // console.log(listScoresTimes);
+//getting the latest score
+let currentScoreTime = listScoresTimes[listScoresTimes.length - 1];
+let currentScoreObject = {
+    score: currentScoreTime.split("-")[0],
+    time: currentScoreTime.split("-")[1],
+}
 
 //creating an array of objects
 let listObjectsScores = [];
 for (let i = 0; i < listScoresTimes.length; i++) {
     let miniArray = listScoresTimes[i].split("-");
-    // console.log(miniArray);
 
     let object = {};
     object.score = miniArray[0];
     object.time = miniArray[1];
-    // console.log(object);
 
     listObjectsScores.push(object);
-    // console.log(listObjectsScores);
 }
 
 //sorting it by score (decreasing) - this compare function is useful to sort the scores
@@ -37,7 +40,11 @@ function compare(a, b) {
 }
 
 listObjectsScores.sort(compare); //the array is sorted depending on the score
-// console.log(listObjectsScores);
+
+//calculating the ranking for the current (latest) score and injecting a sentence into the HTML
+let rankingCurrentScore = listObjectsScores.findIndex(i => i.time === currentScoreObject.time);;
+let currentScoreElt = document.querySelector(".currentScore");
+currentScoreElt.innerHTML = `You have a score of <span>${currentScoreObject.score}</span> points and your rank is: <span>${rankingCurrentScore + 1}</span> (on a total of ${listObjectsScores.length})`;
 
 //creating an array with the five highest score
 let nbScores = 5; //number of scores we want to inject in the page, that way it's easier to change later on
