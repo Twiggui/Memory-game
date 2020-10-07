@@ -87,6 +87,7 @@ playButton.addEventListener("click", function (e) {
     }
 
     sessionStorage.setItem("difficultyLevel", difficultyLevel);
+
   } else {
     e.preventDefault();
     alert("You need to select a difficulty level");
