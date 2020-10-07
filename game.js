@@ -138,12 +138,15 @@ for (let i = 0; i < cardTable.length; i += 1) {
 
     // console.log('cardTable.length : ' + cardTable.length);
     // console.log('openedCards.length : ' + openedCards.length);
-    let overlaypopup = document.querySelector('.overlay');
+    let overlayPopupWin = document.querySelector('.popupWin');
+    let overlayPopupLoose = document.querySelector('.popupLoose');
     setTimeout(() => {
       if (cardTable.length === openedCards.length) {
-        overlaypopup.style.display = 'block';
+        overlayPopupWin.style.display = 'block';
         let finalMove = document.querySelector('.finalMove');
         finalMove.innerHTML = `Tu as gagné en ${nbDeCoups} coups`;
+        /*        let totalTime = document.querySelector('.totalTime');
+        /*  totalTime.innerHTML = `${}`; */
       }
     }, 1000);
   });
@@ -153,16 +156,16 @@ for (let i = 0; i < cardTable.length; i += 1) {
 let currentTime = new Date().getTime();
 
 let score = Math.floor(Math.random() * 1500); //here we'll have to get the score from the score calculating function
-let score_time = score + "-" + currentTime;
+let score_time = score + '-' + currentTime;
 
 // localStorage.clear(); - if we want to clean the local storage
 
 let lastItem = 0;
 
-while (localStorage.getItem(`score${lastItem}`)) { //we're checking the existing score0, score1, score2...and creating a new one
-    lastItem++;
+while (localStorage.getItem(`score${lastItem}`)) {
+  //we're checking the existing score0, score1, score2...and creating a new one
+  lastItem++;
 }
 localStorage.setItem(`score${lastItem}`, score_time);
 // console.log(lastItem);
 // console.log(score_time);
-

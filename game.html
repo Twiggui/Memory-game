@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Game</title>
-  <link rel="stylesheet" href="game.css" />
-  <link rel="stylesheet" href="footer.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-  <nav>
-    <ul>
-      <li class="navigation"><a href="" title="exit">HighFiveMemo</a></li>
-    </ul>
-    <ul>
-      <li>
-        <a href="index.html" title="exit">
-          <img src="images/exit.png" alt="exit" />
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="utf-8" />
+    <title>Game</title>
+    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="navigation"><a href="" title="exit">HighFiveMemo</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="index.html" title="exit">
+            <img src="images/exit.png" alt="exit" />
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-  <section class="timersection">
-  <div>Time left = <span id="timer"></span></div>
-</section>
+    <section class="timersection">
+      <div>Time left = <span id="timer"></span></div>
+    </section>
 
-  <section class="jeux">
+    <section class="jeux">
       <div class="jeuximgfacile card-wrapper conteneur"></div>
     </section>
-      
-<div id="popupWin" class="overlay">
+
+    <div class="popupWin overlay">
       <div class="popup">
         <h2>Congratulations 🎉</h2>
         <a class="close" href="#">×</a>
         <div class="content-1">Congratulations you're a winner 🎉🎉</div>
         <div class="content-2">
           <p class="finalMove"></p>
-          <p>in <span id="totalTime"></span></p>
+          <p>in <span class="totalTime"></span></p>
           <button class="allScore">All your score</button>
         </div>
+      </div>
+    </div>
+
+    <div class="popupLoose overlay">
+      <div class="popup">
+        <h2>You loose 👎</h2>
+        <a class="close" href="#">×</a>
+        <div class="content-1">Boouuh you're a LOOSER 👎👎</div>
+        <button class="allScore">All your score</button>
       </div>
     </div>
 
