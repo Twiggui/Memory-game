@@ -68,6 +68,7 @@ toggleSpace.addEventListener("click", changeLang);
 
 let radioButtons = document.getElementsByClassName("difficulty");
 let playButton = document.querySelector(".button a");
+let alertElt = document.querySelector(".alert");
 
 playButton.addEventListener("click", function (e) {
   let difficultyLevel = "";
@@ -91,7 +92,7 @@ playButton.addEventListener("click", function (e) {
 
   } else {
     e.preventDefault();
-    alert("You need to select a difficulty level");
+    alertElt.style.display = "block";
   }
 
 });
