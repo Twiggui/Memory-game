@@ -1,76 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Game</title>
+    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Game</title>
-  <link rel="stylesheet" href="game.css" />
-  <link rel="stylesheet" href="footer.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<section class="timersection">
-  <div>Time left = <span id="timer"></span></div>
-</section>
+  <body>
+    <nav>
+      <ul>
+        <li class="navigation"><a href="" title="exit">HighFiveMemo</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="" title="exit">
+            <img src="images/exit.png" alt="exit" />
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-<body>
-  <nav>
-    <ul>
-      <li class="navigation"><a href="" title="exit">HighFiveMemo</a></li>
-    </ul>
-    <ul>
-      <li>
-        <a href="" title="exit">
-          <img src="images/exit.png" alt="exit" />
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <section class="timersection">
+      <div>Time left = <span id="timer"></span></div>
+    </section>
 
-  <section class="timersection">
-    <div class="timer">2:35</div>
-  </section>
+    <section class="jeux">
+      <div class="jeuximgfacile card-wrapper conteneur"></div>
+    </section>
 
-  <section class="jeux">
-    <div class="jeuximgfacile card-wrapper conteneur">
-      <!--the card-wrapper class is useless but i'm keeping it until everything works-->
-      <!--<div class="card">
-          <img src="planete.jpg" alt="planete" />
+    <div id="popupWin" class="overlay">
+      <div class="popup">
+        <h2>Congratulations 🎉</h2>
+        <a class="close" href="#">×</a>
+        <div class="content-1">Congratulations you're a winner 🎉🎉</div>
+        <div class="content-2">
+          <p class="finalMove"></p>
+          <p>in <span id="totalTime"></span></p>
+          <button class="allScore">All your score</button>
         </div>
-
-        <div class="card">
-          <img src="planete.jpg" alt="planete" />
-        </div>
-
-        <div class="card">
-          <img src="planete.jpg" alt="planete" />
-        </div>
-
-        <div class="card">
-          <img src="planete.jpg" alt="planete" />
-        </div>
-
-        <div class="card">
-          <img src="planete.jpg" alt="planete" />
-        </div>
-
-        <div class="card">
-          <img src="planete.jpg" alt="planete" />
-        </div>
-
-        <div class="card">
-          <img src="planete.jpg" alt="planete" />
-        </div>
-
-        <div class="card">
-          <img src="planete.jpg" alt="planete" />
-        </div> -->
+      </div>
     </div>
-  </section>
 
-  <section class="replaysection">
-    <button class="replay">Replay</button>
-  </section>
-  <script src="timer.js"></script>
-  <script type="text/javascript" src="game.js"></script>
-
-</body>
+    <section class="replaysection">
+      <button class="replay">Replay</button>
+    </section>
+    <script src="timer.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+  </body>
+</html>
