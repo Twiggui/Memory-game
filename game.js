@@ -142,20 +142,16 @@ for (let i = 0; i < cardTable.length; i += 1) {
 //this will have to be added in the "winning" event of the game
 let currentTime = new Date().getTime();
 
-// console.log(currentTime);
-
 let score = Math.floor(Math.random() * 1500); //here we'll have to get the score from the score calculating function
 let score_time = score + "-" + currentTime;
 
-// localStorage.clear();
+// localStorage.clear(); - if we want to clean the local storage
 
 let lastItem = 0;
 
-while (localStorage.getItem(`score${lastItem}`)) {
-    console.log(lastItem);
-    console.log(score_time);
+while (localStorage.getItem(`score${lastItem}`)) { //we're checking the existing score0, score1, score2...and creating a new one
     lastItem++;
 }
 localStorage.setItem(`score${lastItem}`, score_time);
-console.log(lastItem);
-console.log(score_time);
+// console.log(lastItem);
+// console.log(score_time);
