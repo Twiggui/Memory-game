@@ -90,7 +90,7 @@ body{
 
 /* Style the active link (or home/logo) */
 .topnav h1.active > a {
-  font-size: 20px;
+  font-size: 30px;
   color: var(--text-color-header);
   width: min-content;
   white-space: nowrap;
@@ -203,9 +203,10 @@ footer {
 
 .button a {
   text-decoration: none;
-  color: inherit;
+  color: white;
   font-size: 20px;
   padding: 4px;
+  font-weight: bold;
 }
 
 .alert {
