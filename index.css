@@ -7,8 +7,8 @@
 
 :root {
   --background-color-header: rgb(52, 58, 64);
-  --background-color-hover: #ddd;
-  --background-color-sections: rgb(224, 224, 224);
+  --background-color-hover: rgba(223, 74, 74, 0.8);
+  --background-color-sections: rgba(223, 74, 74, 0.8);
 
   --text-color-main: black;
   --text-color-header: black;
@@ -59,6 +59,7 @@ body{
 /* Hide the links inside the navigation menu (except for logo/home) - for mobile */
 .topnav #myLinks {
   display: none;
+  
 }
 
 /* Style navigation menu links - ALL the links inside the .topnav div, including the main title */
