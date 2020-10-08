@@ -36,7 +36,9 @@ function checkSecond(sec) {
   }
   return sec;
 }
+/*
+relaod croix a changer pour fixe des images
 const buttonCroixLoose = document.querySelector('.close-loose');
 buttonCroixLoose.addEventListener('click', () => {
   document.location.reload(true);
-});
+}); */
