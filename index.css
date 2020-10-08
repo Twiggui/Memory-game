@@ -276,6 +276,16 @@ footer {
  
 }
 
+.span-8 {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10px 20px 0px 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(255, 255, 255);
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+}
+
 .rules {
   height: auto;
 }
@@ -287,6 +297,22 @@ footer {
 
 .span-2 {
   margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(255, 255, 255);
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.span-3{
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10px 20px 0px 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(255, 255, 255);
+  border: none;
+  padding: 5px;
+  font-weight: bold;
 }
 
 /* Specific breakpoint for the burger menu */
