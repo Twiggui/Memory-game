@@ -225,6 +225,14 @@ footer {
   padding: 4px;
 }
 
+.alert {
+  display:none;
+  font-size:16px;
+  color: rgb(201, 83, 83);
+  text-align:center;
+  padding: 5px;
+}
+
 .formLetsPlay {
   display: flex;
   justify-content: center;
