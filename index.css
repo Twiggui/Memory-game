@@ -272,3 +272,17 @@ footer {
 .difficulty{
   margin-left: 15px;
 }
+
+.rules{
+  height: auto;
+}
+
+.enterPseudo{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.span-2{
+  margin-bottom: 5px;
+}
+
