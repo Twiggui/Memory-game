@@ -82,8 +82,8 @@ ul li {
 .card {
   display: flex;
   flex-direction: column;
-  width: 30vw;
-  height: 30vw;
+  width: 20vw;
+  height: 20vw;
   position: relative;
   margin: 10px;
   cursor: url(images/high-five.png), pointer;
@@ -97,8 +97,8 @@ ul li {
 }
 
 .card img {
-  height: 30vw;
-  width: 30vw;
+  height: 100%;
+  width: 100%;
   position: absolute;
 }
 
@@ -164,6 +164,7 @@ ul li {
   font-weight: bold;
   text-decoration: none;
   color: #333;
+  cursor: pointer;
 }
 
 .popup .close:hover {
@@ -175,6 +176,14 @@ ul li {
   max-height: 30%;
   overflow: auto;
   text-align: center;
+}
+.allScore a {
+  color: black;
+}
+
+.allScore {
+  padding: 5px;
+  margin-top: 10px;
 }
 /*jeux en mode normal*/
 

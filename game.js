@@ -14,6 +14,23 @@ function shuffle(array) {
   return array;
 }
 
+/* declaration de la fonction de calcule du score*/
+let score = 0;
+function calculate() {
+  let timer = document.getElementById('timer').innerHTML;
+  let timeArray = timer.split(/[:]+/);
+  let m = timeArray[0];
+  let s = checkSecond(timeArray[1] - 1);
+  let presentTime = m * 60 + s;
+  if (presentTime > 090) {
+    return (score = presentTime * 2 + ' points');
+  } else if (presentTime <= 090 && presentTime > 000) {
+    return (score = presentTime + ' points');
+  } else {
+    return (score = 0 + ' points');
+  }
+}
+
 // Retrieve in the sessionStorage the value of difficulty selected in the first page
 let difficultyLevel = sessionStorage.getItem('difficultyLevel');
 console.log(difficultyLevel);
@@ -58,11 +75,7 @@ for (let i = 0; i < nbPairs; i += 1) {
 }
 
 //HERE: use the shuffle function
-console.log(arrayToShuffle);
 const arrayImagesUrl = shuffle(arrayToShuffle);
-
-//console logging to check everything is going well
-console.log(arrayImagesUrl);
 
 //creating the cards
 let cardWrapper = document.querySelector('.conteneur');
@@ -136,6 +149,7 @@ for (let i = 0; i < cardTable.length; i += 1) {
       }
     }
 
+    // QUAND ON GAGNE //
     // console.log('cardTable.length : ' + cardTable.length);
     // console.log('openedCards.length : ' + openedCards.length);
     let overlayPopupWin = document.querySelector('.popupWin');
@@ -144,7 +158,21 @@ for (let i = 0; i < cardTable.length; i += 1) {
       if (cardTable.length === openedCards.length) {
         overlayPopupWin.style.display = 'block';
         let finalMove = document.querySelector('.finalMove');
-        finalMove.innerHTML = `Tu as gagné en ${nbDeCoups} coups`;
+        document.querySelector('body').classList.add('winner');
+        let score = calculate();
+        let score_time = score + '-' + currentTime;
+
+        finalMove.innerHTML = `Tu as gagné avec ${score} en ${nbDeCoups} coups`;
+
+        // localStorage.clear(); - if we want to clean the local storage
+
+        let lastItem = 0;
+
+        while (localStorage.getItem(`score${lastItem}`)) {
+          //we're checking the existing score0, score1, score2...and creating a new one
+          lastItem++;
+        }
+        localStorage.setItem(`score${lastItem}`, score_time);
         /*        let totalTime = document.querySelector('.totalTime');
         /*  totalTime.innerHTML = `${}`; */
       }
@@ -152,20 +180,74 @@ for (let i = 0; i < cardTable.length; i += 1) {
   });
 }
 
+/* button pour fermer la popUpWIN*/
+
+const buttonCroix = document.querySelector('.close-win');
+buttonCroix.addEventListener('click', () => {
+  let overlayPopupWin = document.querySelector('.popupWin');
+  overlayPopupWin.style.display = 'none';
+});
+/* button pour fermer la popUpLOOSE*/
+
+const buttonCroixLoose = document.querySelector('.close-loose');
+buttonCroixLoose.addEventListener('click', () => {
+  let overlayPopupLoose = document.querySelector('.popupLoose');
+  overlayPopupLoose.style.display = 'none';
+});
+
+/*reload la page avec button replay*/
+
+const replayGame = document.querySelector('.replay');
+replayGame.addEventListener('click', () => {
+  document.location.reload(true);
+});
+
 //this will have to be added in the "winning" event of the game
-let currentTime = new Date().getTime();
+let currentTime = new Date().getTime(); //here we'll have to get the score from the score calculating function
 
-let score = Math.floor(Math.random() * 1500); //here we'll have to get the score from the score calculating function
-let score_time = score + '-' + currentTime;
-
-// localStorage.clear(); - if we want to clean the local storage
-
-let lastItem = 0;
-
-while (localStorage.getItem(`score${lastItem}`)) {
-  //we're checking the existing score0, score1, score2...and creating a new one
-  lastItem++;
-}
-localStorage.setItem(`score${lastItem}`, score_time);
+/* let score = Math.floor(Math.random() * 1500); */
 // console.log(lastItem);
 // console.log(score_time);
+
+document.getElementById('timer').innerHTML = 01 + ':' + 010;
+startTimer();
+
+function startTimer() {
+  let presentTime = document.getElementById('timer').innerHTML;
+  let timeArray = presentTime.split(/[:]+/);
+  let m = timeArray[0];
+  let s = checkSecond(timeArray[1] - 1);
+  if (s == 59) {
+    m = m - 1;
+  }
+  if (m < 01 && s <= 30) {
+    document.getElementById('timer').style.color = 'red';
+    document.getElementById('timer').style.textShadow = 'red';
+  }
+  if (m < 0) {
+    /*Popup Loose*/
+    let overlayPopupLoose = document.querySelector('.popupLoose');
+    overlayPopupLoose.style.display = 'block';
+    let cards = document.querySelectorAll('.card');
+    for (let card of cards) {
+      card.classList.add('disabled');
+    }
+    return;
+  }
+
+  document.getElementById('timer').innerHTML = m + ':' + s;
+  // console.log(m);
+  if (!document.querySelector('body').classList.contains('winner')) {
+    setTimeout(startTimer, 1000);
+  }
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {
+    sec = '0' + sec;
+  }
+  if (sec < 0) {
+    sec = '59';
+  }
+  return sec;
+}
