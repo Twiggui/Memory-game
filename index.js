@@ -24,29 +24,12 @@ window.addEventListener('resize', function () {
   }
 });
 
-//getting the selected level and stocking in session storage
-
-let radioButtons = document.getElementsByClassName("difficulty");
-let playButton = document.querySelector(".button a");
-
-playButton.addEventListener("click", function () {
-  let difficultyLevel = "";
-
-  for (let radioButton of radioButtons) {
-    if (radioButton.checked) {
-      difficultyLevel = radioButton.value;
-      console.log(difficultyLevel);
-    }
-  }
-
-  sessionStorage.setItem("difficultyLevel", difficultyLevel);
-});
 
 let toggleSpace = document.querySelector(".toggle-space");
 
-function changeLang(){
-    let whatLang = document.querySelector(".lang").lang;
-    if(whatLang === "en"){
+function changeLang() {
+  let whatLang = document.querySelector(".lang").lang;
+  if (whatLang === "en") {
     toggleSpace.style.justifyContent = "flex-end";
     document.querySelector(".lang").lang = "fr";
     document.querySelector(".span-1").innerHTML = "Accueil";
@@ -61,22 +44,55 @@ function changeLang(){
     document.querySelector(".span-10").innerHTML = "Difficile";
     document.querySelector(".span-11").innerHTML = "Jeu !!";
     document.querySelector(".span-12").innerHTML = "- Site web créé le 29 septembre 2020";
-    }
-    else {
-      toggleSpace.style.justifyContent = "flex-start";
-      document.querySelector(".lang").lang = "en";
-      document.querySelector(".span-1").innerHTML = "Home";
-      document.querySelector(".span-2").innerHTML = "Enter your pseudo :";
-      document.querySelector(".span-3").innerHTML = "Rules of the game :";
-      document.querySelector(".span-4").innerHTML = "You have cards face down. The aim is to find the even cards within the time limit.";
-      document.querySelector(".span-5").innerHTML = "Click on a card to flip it over and find its twin. If you find the pair, the cards remain face up and you can continue.";
-      document.querySelector(".span-6").innerHTML = "If you make a mistake, the last 2 cards turned over become hidden again.";
-      document.querySelector(".span-7").innerHTML = "Increase the difficulty if you want to add pairs of cards. Your score will be calculated according to the level of difficulty and the time taken.";
-      document.querySelector(".span-8").innerHTML = "Select a difficulty mode :";
-      document.querySelector(".span-9").innerHTML = "Easy";
-      document.querySelector(".span-10").innerHTML = "Hard";
-      document.querySelector(".span-11").innerHTML = "Let's Play !!";
-      document.querySelector(".span-12").innerHTML = "- Website created on Septembre 29, 2020";
-    };};
+  }
+  else {
+    toggleSpace.style.justifyContent = "flex-start";
+    document.querySelector(".lang").lang = "en";
+    document.querySelector(".span-1").innerHTML = "Home";
+    document.querySelector(".span-2").innerHTML = "Enter your pseudo :";
+    document.querySelector(".span-3").innerHTML = "Rules of the game :";
+    document.querySelector(".span-4").innerHTML = "You have cards face down. The aim is to find the even cards within the time limit.";
+    document.querySelector(".span-5").innerHTML = "Click on a card to flip it over and find its twin. If you find the pair, the cards remain face up and you can continue.";
+    document.querySelector(".span-6").innerHTML = "If you make a mistake, the last 2 cards turned over become hidden again.";
+    document.querySelector(".span-7").innerHTML = "Increase the difficulty if you want to add pairs of cards. Your score will be calculated according to the level of difficulty and the time taken.";
+    document.querySelector(".span-8").innerHTML = "Select a difficulty mode :";
+    document.querySelector(".span-9").innerHTML = "Easy";
+    document.querySelector(".span-10").innerHTML = "Hard";
+    document.querySelector(".span-11").innerHTML = "Let's Play !!";
+    document.querySelector(".span-12").innerHTML = "- Website created on September 29, 2020";
+  };
+};
 
 toggleSpace.addEventListener("click", changeLang);
+//getting the selected level and stocking in session storage
+
+let radioButtons = document.getElementsByClassName("difficulty");
+let playButton = document.querySelector(".button a");
+let alertElt = document.querySelector(".alert");
+
+playButton.addEventListener("click", function (e) {
+  let difficultyLevel = "";
+  let isChecked = false;
+
+  for (let i = 0; i < radioButtons.length; i += 1) {
+    if (radioButtons[i].checked) {
+      isChecked = true;
+    }
+  }
+
+  if (isChecked) {
+    for (let radioButton of radioButtons) {
+      if (radioButton.checked) {
+        difficultyLevel = radioButton.value;
+        console.log(difficultyLevel);
+      }
+    }
+
+    sessionStorage.setItem("difficultyLevel", difficultyLevel);
+
+  } else {
+    e.preventDefault();
+    alertElt.style.display = "block";
+  }
+
+});
