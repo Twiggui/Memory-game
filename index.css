@@ -94,22 +94,6 @@
   color: var(--text-color-main);
 }
 
-/* Specific breakpoint for the burger menu */
-@media only screen and (min-width: 570px) {
-  /*changing the burger menu*/
-  .topnav #myLinks {
-    display: flex;
-  }
-
-  .topnav a.icon {
-    display: none;
-  }
-
-  .topnav {
-    display: flex;
-    justify-content: space-between;
-  }
-}
 section {
   display: flex;
   font-weight: bold;
@@ -185,16 +169,7 @@ footer {
 .video {
   margin-right: 50px;
 }
-@media screen and (max-width: 1024px) {
-  .video {
-    display: none;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .rules {
-    width: 80%;
-  }
-}
+
 .button {
   display: flex;
   justify-content: center;
@@ -226,10 +201,10 @@ footer {
 }
 
 .alert {
-  display:none;
-  font-size:16px;
+  display: none;
+  font-size: 16px;
   color: rgb(201, 83, 83);
-  text-align:center;
+  text-align: center;
   padding: 5px;
 }
 
@@ -238,17 +213,17 @@ footer {
   justify-content: center;
 }
 
-.toggle-bar{
+.toggle-bar {
   display: flex;
   width: fit-content;
   justify-content: space-around;
 }
 
-.toggle-lang{
+.toggle-lang {
   font-size: 16px;
 }
 
-.toggle-space{
+.toggle-space {
   width: 35px;
   background-color: gray;
   margin-left: 5px;
@@ -258,14 +233,14 @@ footer {
   justify-content: flex-start;
 }
 
-.toggle-button{
-  background-color:black;
+.toggle-button {
+  background-color: black;
   width: 20px;
   height: 100%;
   border-radius: 25%;
 }
 
-.line-toggle-bar{
+.line-toggle-bar {
   width: auto;
   display: flex;
   justify-content: flex-end;
@@ -273,10 +248,39 @@ footer {
   margin-right: 10px;
 }
 
-.span-2{
+.span-2 {
   margin-right: 8px;
 }
 
-.difficulty{
+.difficulty {
   margin-left: 15px;
+}
+
+/* Specific breakpoint for the burger menu */
+@media only screen and (min-width: 570px) {
+  /*changing the burger menu*/
+  .topnav #myLinks {
+    display: flex;
+  }
+
+  .topnav a.icon {
+    display: none;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .video {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rules {
+    width: 80%;
+  }
 }
