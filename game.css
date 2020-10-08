@@ -177,6 +177,14 @@ ul li {
   overflow: auto;
   text-align: center;
 }
+.allScore a {
+  color: black;
+}
+
+.allScore {
+  padding: 5px;
+  margin-top: 10px;
+}
 /*jeux en mode normal*/
 
 .replaysection {
