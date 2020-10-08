@@ -156,4 +156,6 @@ flex: 1 0 auto;
 
 footer {
 flex-shrink: 0;
+margin-top: 15px;
 }
+

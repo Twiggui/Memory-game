@@ -256,6 +256,19 @@ footer {
   margin-left: 15px;
 }
 
+.rules{
+  height: auto;
+}
+
+.enterPseudo{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.span-2{
+  margin-bottom: 5px;
+}
+
 /* Specific breakpoint for the burger menu */
 @media only screen and (min-width: 570px) {
   /*changing the burger menu*/
