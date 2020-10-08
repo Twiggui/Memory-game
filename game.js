@@ -37,14 +37,14 @@ console.log(difficultyLevel);
 
 //here, create the array we need to pick from - here, we stock all the URLS for possible future images
 const stockingImages = [
-  'https://placekitten.com/200/287',
-  'http://place-puppy.com/200x200',
-  'http://placebear.com/300/200',
-  'https://placekitten.com/200/200',
-  'http://place-puppy.com/300x300',
-  'https://placekitten.com/200/322',
-  'https://placekitten.com/200/256',
-  'http://place-puppy.com/200x345',
+  'images/cat_paw_small.jpg',
+  'images/dog_paw_small.jpg',
+  'images/duck_feet.jpg',
+  'images/elephant_feet_small.jpg',
+  'images/horse_hoove_small.jpg',
+  'images/monkey_hand_small.jpg',
+  'images/fish_fin_small.jpg',
+  'images/baby_hand.jpg',
 ];
 
 let nbPairs = 0;
@@ -90,7 +90,7 @@ function createCard() {
 
     let cardElt = document.createElement('div');
     cardElt.classList.add('card');
-    cardElt.title = imageUrl;
+    // cardElt.title = imageUrl;
     cardWrapper.appendChild(cardElt);
 
     let cardFrontElt = document.createElement('img');
@@ -123,9 +123,11 @@ for (let i = 0; i < cardTable.length; i += 1) {
     nbCartesTestees += 1;
     cardTable[i].classList.add('enAttente');
     let imagesCompare = document.querySelectorAll('.enAttente');
+    // console.log(imagesCompare);
+    // console.log(imagesCompare[0].childNodes);
 
     if (nbCartesTestees === 2) {
-      if (imagesCompare[0].title === imagesCompare[1].title) {
+      if (imagesCompare[0].childNodes[0].src === imagesCompare[1].childNodes[0].src) {
         for (let j = 0; j < imagesCompare.length; j += 1) {
           imagesCompare[j].classList.remove('enAttente');
           imagesCompare[j].classList.remove('disabled');
