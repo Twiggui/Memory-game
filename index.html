@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>High Five Memo - Home</title>
+  <title>HighFiveMemo - Home</title>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="footer.css" />
@@ -33,13 +33,15 @@
     <div class="line-toggle-bar">
       <div class="toggle-bar">
         <div class="toggle-lang">EN</div>
-        <div class="toggle-space"><div class="toggle-button"></div></div>
+        <div class="toggle-space">
+          <div class="toggle-button"></div>
+        </div>
         <div class="toggle-lang">FR</div>
       </div>
       </div>
     <section class="enterPseudo">
       <label for="pseudo" class="span-2">Enter your pseudo :</label>
-      <input type="text" name="pseudo" />
+      <input id="pseudo" type="text" name="pseudo" placeholder="anonymous" />
     </section>
 
     <div class="central">
@@ -50,7 +52,7 @@
             the time limit. </span><br /><br /><span class="span-5">Click on a card to flip it over and find
             its twin. If you find the pair, the cards remain face up and you can
             continue. </span><br />
-            <span class="span-6">If you make a mistake, the last 2 cards turned over become hidden
+          <span class="span-6">If you make a mistake, the last 2 cards turned over become hidden
             again. </span><br /><br /><span class="span-7">Increase the difficulty if you want to add pairs
             of cards. Your score will be calculated according to the level of
             difficulty and the time taken.</span>
@@ -89,7 +91,9 @@
   </main>
 
   <div class="button"><a href="game.html" class="span-11">Let's Play !!</a></div>
-  <footer class="display">
+  <div class="alert">You need to select a difficulty level</div>
+
+  <footer>
     <p class="p-footer">
       HighFiveMemo by
       <a href="devTeam.html" class="aFooter">Team HighFive</a> <span class="span-12"> - Website
