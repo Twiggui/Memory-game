@@ -19,12 +19,14 @@ let score = 0;
 function calculate() {
   let timer = document.getElementById('timer').innerHTML;
   let timeArray = timer.split(/[:]+/);
+  console.log(timeArray);
   let m = timeArray[0];
   let s = checkSecond(timeArray[1] - 1);
-  let presentTime = m * 60 + s;
-  if (presentTime > 090) {
+  let presentTime = parseInt(m) * 60 + parseInt(s);
+  console.log(presentTime);
+  if (presentTime > 90) {
     return (score = presentTime * 2 + ' points');
-  } else if (presentTime <= 090 && presentTime > 000) {
+  } else if (presentTime <= 90 && presentTime > 0) {
     return (score = presentTime + ' points');
   } else {
     return (score = 0 + ' points');
@@ -37,20 +39,31 @@ console.log(difficultyLevel);
 
 //here, create the array we need to pick from - here, we stock all the URLS for possible future images
 const stockingImages = [
-  'images/cat_paw_small.jpg',
-  'images/dog_paw_small.jpg',
-  'images/duck_feet.jpg',
-  'images/elephant_feet_small.jpg',
-  'images/horse_hoove_small.jpg',
-  'images/monkey_hand_small.jpg',
-  'images/fish_fin_small.jpg',
-  'images/baby_hand.jpg',
+
+  'images/hig_five1_small.jpg',
+  'images/hig_five2_small.jpg',
+  'images/hig_five3_small.jpg',
+  'images/hig_five4_small.jpg',
+  'images/hig_five5_small.jpg',
+  'images/hig_five6_small.jpg',
+  'images/hig_five7_small.jpg',
+  'images/hig_five1_small.jpg',
+  'images/hig_five2_small.jpg',
+  'images/hig_five3_small.jpg',
+  'images/hig_five4_small.jpg',
+  'images/hig_five5_small.jpg',
+  'images/hig_five6_small.jpg',
+  'images/hig_five7_small.jpg',
+
 ];
 
 let nbPairs = 0;
 
 //different number of pairs depending on the difficulty level
 switch (difficultyLevel) {
+  case 'noob':
+    nbPairs = 1;
+    break;
   case 'easy':
     nbPairs = 3;
     break;
@@ -58,7 +71,7 @@ switch (difficultyLevel) {
     nbPairs = 5;
     break;
   case 'hard':
-    nbPairs = 7;
+    nbPairs = 12;
     break;
   default:
     console.log(`Error retrieving the level difficulty`);
@@ -100,8 +113,7 @@ function createCard() {
 
     let cardBackElt = document.createElement('img');
     cardBackElt.classList.add('card-face', 'card-face-back');
-    cardBackElt.src =
-      'https://cybersavoir.csdm.qc.ca/bibliotheques/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg';
+    cardBackElt.src = 'images/question_mark_orange.png';
     cardElt.appendChild(cardBackElt);
   }
 }
@@ -164,7 +176,7 @@ for (let i = 0; i < cardTable.length; i += 1) {
         let score = calculate();
         let score_time = score + '-' + currentTime;
 
-        finalMove.innerHTML = `Tu as gagné avec ${score} en ${nbDeCoups} coups`;
+        finalMove.innerHTML = `You won with ${score} in ${nbDeCoups} attempts`;
 
         // localStorage.clear(); - if we want to clean the local storage
 
@@ -211,7 +223,7 @@ let currentTime = new Date().getTime(); //here we'll have to get the score from 
 // console.log(lastItem);
 // console.log(score_time);
 
-document.getElementById('timer').innerHTML = 01 + ':' + 010;
+document.getElementById('timer').innerHTML = 1 + ':' + 010;
 startTimer();
 
 function startTimer() {

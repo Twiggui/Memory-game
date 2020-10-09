@@ -1,161 +1,175 @@
 /*CSS reset*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --background-color-header: rgb(52, 58, 64);
-    --background-color-hover: #ddd;
-    --background-color-sections: rgb(224, 224, 224);
-    
-    --text-color-main: black;
-    --text-color-header: white;
+  --background-color-hover: rgba(238, 120, 66, 0.822);
+  --background-color-sections: rgba(238, 120, 66, 0.822);
 
-    --text-font: Roboto, Arial;
-  }
-  
+  --text-color-main: black;
+  --text-color-header: black;
+
+  --text-font: Roboto, Arial;
+}
 
 body {
-    font-family: var(--text-font);
-    font-size: 16px;
-    font-weight: 400; /*normal*/
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: 400; /*normal*/
+  background-image: url(images/high44.jpeg);
+  background-color: rgba(252, 252, 252, 0.3);
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .content-wrapper {
-    display:flex;
-    flex-direction:column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    width:100%;
+  width: 100%;
 }
 
 .content-wrapper h2 {
-    font-size: 24px;
-    text-transform: uppercase;
+  font-size: 24px;
+  text-transform: uppercase;
 
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .scoreboard {
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
-    background-color: var(--background-color-sections);
-    width:50%;
-    min-width: 300px;
-    max-width:630px;
-    border: 4px solid var(--background-color-header);
-    border-radius: 10px;
-    margin-top: 25px;
-    padding-bottom:5px;
+  background-color: rgb(253, 175, 139);
+  width: 50%;
+  min-width: 300px;
+  max-width: 630px;
+  border: 4px solid var(--background-color-header);
+  border-radius: 10px;
+  margin-top: 25px;
+  padding-bottom: 5px;
 
-    box-shadow: 5px 5px 5px rgb(212, 205, 205);
-
+  box-shadow: 5px 5px 5px rgb(212, 205, 205);
 }
 
 .score-wrapper {
-    display:flex;
-    flex-wrap: wrap;
-    width:99%;
-    justify-content: space-between;
-    /*border: 1px solid black;*/
-    padding: 0.35em 0;
-    font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 99%;
+  justify-content: space-between;
+  /*border: 1px solid black;*/
+  padding: 0.35em 0;
+  font-size: 18px;
 
-    /* border-radius: 5px; */
+  /* border-radius: 5px; */
 }
 
-.score-wrapper:nth-of-type(1) { /*writing the first score bigger because it's the record*/
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-    text-shadow: 1px 1px rgb(131, 131, 131), 
-                2px 2px  rgb(131, 131, 131), 
-                3px 3px  rgb(131, 131, 131);
+.score-wrapper:nth-of-type(1) {
+  /*writing the first score bigger because it's the record*/
+  flex-direction:column;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  
+}
+
+.recordText {
+  margin:auto;
+  text-shadow: 1px 1px rgb(131, 131, 131), 2px 2px rgb(131, 131, 131),
+    3px 3px rgb(131, 131, 131);
 }
 
 .score-wrapper p {
-    padding: 3px 10px 3px 10px;
-
+  padding: 3px 10px 3px 10px;
 }
 
 .score-wrapper:nth-of-type(2n) {
-    background-color: var(--background-color-header);
-    color:var(--text-color-header);
+  background-color: rgba(216, 92, 34, 0.6);
+  color: var(--text-color-header);s
 }
 
 .ranking {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .button {
-    background-color: var(--background-color-header);
-    text-align:center;
-    color: var(--text-color-header);
-    padding:5px;
-    border-radius: 5px;
-    margin-top:30px;
-
+  display: flex;
+  justify-content: center;
+  background-color:  rgb(52, 58, 64);
+  text-align: center;
+  color: var(--text-color-header);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 25px;
+  font-size: 35px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button:hover {
-    position: relative;
-    top:-3px;
-    background-color: var(--background-color-hover);
-    color: var(--text-color-main);
-    /* border: 1px solid var(--background-color-header); */
-    box-shadow: 0 0 3px var(--background-color-header);
+  position: relative;
+  top: -3px;
+  background-color: var(--background-color-hover);
+  color: var(--text-color-main);
+  box-shadow: 0 0 3px var(--background-color-header);
 }
 
 .button a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 20px;
-    padding:4px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 4px;
+  font-weight: bold;
 }
 
 /*styling the "current score" section*/
 .currentScore {
-    margin-top: 25px;
-    padding: 5px; 
-    max-width:80%;
-    /* border: 1px solid var(--background-color-header); */
-    background-color: var(--background-color-sections);
-    box-shadow: 0 0 2px 1px var(--background-color-header);
+  margin-top: 25px;
+  padding: 5px;
+  max-width: 80%;
+  background-color: var(--background-color-sections);
+  box-shadow: 0 0 2px 1px var(--background-color-header);
 
-    color: var(--background-color-header);
+  color: white;
 
-    font-size : 18px;
-    font-weight: 500;
-    text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .currentScore span {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /*sticking the footer to the bottom of the page*/
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .page {
-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 footer {
+
 flex-shrink: 0;
 margin-top: 15px;
 }
+
 

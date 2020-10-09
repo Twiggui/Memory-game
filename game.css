@@ -19,7 +19,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: #363636;
+  background-color:rgba(0, 0, 0, 0);
   padding-left: 0px;
   padding-right: 5px;
   margin-bottom: 0;
@@ -30,7 +30,7 @@ nav {
 }
 a {
   text-decoration: none;
-  color: white;
+  color:black;
 }
 
 li {
@@ -42,10 +42,16 @@ ul li {
   display: inline-block;
   font-size: 25px;
   font-weight: bold;
-  color: rgb(248, 242, 242);
+  color: rgb(0, 0, 0);
 }
 
 /*timer*/
+body {
+  background-image: url(images/high44.jpeg);
+  background-color: rgba(252, 252, 252, 0.3)
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 #timer {
   margin: auto;
