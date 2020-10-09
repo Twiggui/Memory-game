@@ -23,7 +23,7 @@
 }
 body {
   background-image: url(images/high44.jpeg);
-  background-color: rgba(252, 252, 252, 0.3)
+  background-color: rgba(252, 252, 252, 0.3);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -134,13 +134,12 @@ div p {
   margin: 20px 0px 20px 10px;
 }
 
-
 .Rules {
   width: 80%;
 }
 
-.rules_games{
-  color : black;
+.rules_games {
+  color: black;
 }
 
 .settings_title {
@@ -276,7 +275,7 @@ footer {
   background-color: rgba(238, 120, 66, 0.822);
   margin: 10px 20px 0px 10px;
   border-style: solid;
-  border :none;
+  border: none;
   border-radius: 5px;
   padding: 5px;
   font-weight: bold;

@@ -100,8 +100,7 @@ function createCard() {
 
     let cardBackElt = document.createElement('img');
     cardBackElt.classList.add('card-face', 'card-face-back');
-    cardBackElt.src =
-      'https://cybersavoir.csdm.qc.ca/bibliotheques/files/2018/11/10_banques_dimages_gratuites_libres_de_droits-300x169.jpg';
+    cardBackElt.src = 'images/question_mark_orange.png';
     cardElt.appendChild(cardBackElt);
   }
 }

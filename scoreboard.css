@@ -6,12 +6,11 @@
 }
 
 :root {
-  --background-color-header: rgb(52, 58, 64);
-  --background-color-hover: #ddd;
-  --background-color-sections: rgb(224, 224, 224);
+  --background-color-hover: rgba(238, 120, 66, 0.822);
+  --background-color-sections: rgba(238, 120, 66, 0.822);
 
   --text-color-main: black;
-  --text-color-header: white;
+  --text-color-header: black;
 
   --text-font: Roboto, Arial;
 }
