@@ -9,8 +9,10 @@ footer {
   background-color: rgb(52, 58, 64);
 }
 
-.aFooter {
+.p-footer a {
   color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .aFooter:hover {
