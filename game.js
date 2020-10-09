@@ -39,6 +39,7 @@ console.log(difficultyLevel);
 
 //here, create the array we need to pick from - here, we stock all the URLS for possible future images
 const stockingImages = [
+
   'images/hig_five1_small.jpg',
   'images/hig_five2_small.jpg',
   'images/hig_five3_small.jpg',
@@ -53,6 +54,7 @@ const stockingImages = [
   'images/hig_five5_small.jpg',
   'images/hig_five6_small.jpg',
   'images/hig_five7_small.jpg',
+
 ];
 
 let nbPairs = 0;
@@ -133,6 +135,8 @@ for (let i = 0; i < cardTable.length; i += 1) {
     nbCartesTestees += 1;
     cardTable[i].classList.add('enAttente');
     let imagesCompare = document.querySelectorAll('.enAttente');
+    // console.log(imagesCompare);
+    // console.log(imagesCompare[0].childNodes);
 
     if (nbCartesTestees === 2) {
       if (imagesCompare[0].childNodes[0].src === imagesCompare[1].childNodes[0].src) {

@@ -167,5 +167,9 @@ body {
 }
 
 footer {
-  flex-shrink: 0;
+
+flex-shrink: 0;
+margin-top: 15px;
 }
+
+
