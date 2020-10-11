@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text-font);
+}
+
+:root {
+  --background-color-header: rgb(52, 58, 64);
+  --background-color-hover: rgba(238, 120, 66, 0.822);
+  --background-color-sections: rgba(238, 120, 66, 0.822);
+
+  --text-color-main: black;
+  --text-color-header: black;
+
+  --text-font: Roboto, Arial;
+}
+/*CSS reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(images/high44.jpeg);
+  background-color: rgba(252, 252, 252, 0.3);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*defining variables*/
+:root {
+  --background-color-header: rgb(52, 58, 64);
+  --background-color-hover: rgba(238, 120, 66, 0.822);
+
+  --text-color-main: black;
+  --text-color-header: black;
+}
+
+/* Style the navigation menu */
+.topnav-wrapper {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*position:fixed; always keeping the header on top of the page*/
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative; /*we need to set postion as relative to be able to position things in absolute inside it*/
+  width: 100%;
+  padding: 4px;
+  margin: 6px;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) - for mobile */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links - ALL the links inside the .topnav div, including the main title */
+.topnav a {
+  color: var(--text-color-header, white);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+
+  border: var(--text-color-header) solid 1px;
+  border-radius: 2px;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: var(--background-color-hover);
+  color: var(--text-color-main);
+}
+
+/* Style the active link (or home/logo) */
+.topnav h1.active > a {
+  font-size: 30px;
+  color: var(--text-color-header);
+  width: min-content;
+  white-space: nowrap;
+}
+
+.topnav h1.active > a:hover {
+  color: var(--text-color-main);
+}
+
+section {
+  display: flex;
+  font-weight: bold;
+  margin: 20px 0px 20px 10px;
+}
+section input {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  box-shadow: 2px 2px 2px grey;
+}
+.rules {
+  background-color: rgba(238, 120, 66, 0.822);
+  margin: 10px 20px 0px 10px;
+  border-style: solid;
+  border: none;
+  border-radius: 5px;
+  border-color: black;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+div label {
+  margin: 10px 0px 20px 10px;
+}
+
+div p {
+  font-weight: bold;
+  margin: 20px 0px 20px 10px;
+}
+
+.Rules {
+  width: 80%;
+}
+
+.rules_games {
+  color: black;
+}
+
+.settings_title {
+  margin-bottom: 0px;
+}
+.easy,
+.normal,
+.hard {
+  margin-left: 20px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+.play {
+  background-color: var(--background-color-header);
+  color: var(--text-color-header);
+  padding: 20px 20px 20px 20px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.play:hover {
+  position: relative;
+  top: -3px;
+  background-color: var(--background-color-hover);
+  color: var(--text-color-main);
+  /* border: 1px solid var(--background-color-header); */
+  box-shadow: 0 0 3px var(--background-color-header);
+}
+
+footer {
+  margin-top: 15px;
+}
+.central {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.video {
+  margin-right: 50px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color-header);
+  text-align: center;
+  color: var(--text-color-header);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 25px;
+  font-size: 35px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button:hover {
+  position: relative;
+  top: -3px;
+  background-color: var(--background-color-hover);
+  color: var(--text-color-main);
+  box-shadow: 0 0 3px var(--background-color-header);
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.alert {
+  display: none;
+  font-size: 16px;
+  color: rgba(238, 120, 66, 0.822);
+  text-align: center;
+  padding: 5px;
+}
+
+.formLetsPlay {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-bar {
+  display: flex;
+  width: fit-content;
+  justify-content: space-around;
+}
+
+.toggle-lang {
+  font-size: 16px;
+}
+
+.toggle-space {
+  width: 35px;
+  background-color: gray;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 25%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.toggle-button {
+  background-color: black;
+  width: 20px;
+  height: 100%;
+  border-radius: 25%;
+}
+
+.line-toggle-bar {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.span-2 {
+  margin-right: 8px;
+}
+
+.difficulty {
+  margin-left: 15px;
+}
+
+.span-setting {
+  background-color: rgba(238, 120, 66, 0.822);
+  margin: 10px 20px 0px 10px;
+  border-style: solid;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.span-8 {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10px 20px 0px 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(255, 255, 255);
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.rules {
+  height: auto;
+}
+
+.enterPseudo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.span-2 {
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(255, 255, 255);
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.span-3 {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10px 20px 0px 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(255, 255, 255);
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+}
+
+/* Specific breakpoint for the burger menu */
+@media only screen and (min-width: 570px) {
+  /*changing the burger menu*/
+  .topnav #myLinks {
+    display: flex;
+  }
+
+  .topnav a.icon {
+    display: none;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .video {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rules {
+    width: 80%;
+  }
+}

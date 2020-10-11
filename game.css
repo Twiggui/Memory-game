@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text-font);
+}
+
+:root {
+  --background-color-header: rgb(52, 58, 64);
+  --background-color-hover: #ddd;
+  --background-color-sections: rgb(224, 224, 224);
+
+  --text-color-main: black;
+  --text-color-header: white;
+
+  --text-font: Roboto, Arial;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color:rgba(0, 0, 0, 0);
+  padding-left: 0px;
+  padding-right: 5px;
+  margin-bottom: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 60px;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color:black;
+}
+
+li {
+  padding: 10px;
+}
+
+ul li {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+/*timer*/
+body {
+  background-image: url(images/high44.jpeg);
+  background-color: rgba(252, 252, 252, 0.3)
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#timer {
+  margin: auto;
+  display: inline-block;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: groove 2px black;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px grey;
+}
+.timersection {
+  text-align: center;
+  padding: 10px;
+  height: 60px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*this is the CSS from Guillem flipping and matching cards code*/
+.conteneur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+  margin: 10px;
+  cursor: url(images/high-five.png), pointer;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face-front {
+  transform: rotateY(180deg);
+}
+
+.disabled,
+.matched {
+  pointer-events: none;
+}
+
+.jeux img {
+  display: block;
+  max-width: 30vw;
+  border-radius: 5px;
+}
+
+.jeux .card {
+  border-radius: 5px;
+}
+
+.overlay {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ffffff;
+  border: solid 1px black;
+  border-radius: 20px;
+  width: 85%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  text-align: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.popup .close:hover {
+  color: #e5f720;
+}
+
+.popup .content-1,
+.content-2 {
+  max-height: 30%;
+  overflow: auto;
+  text-align: center;
+}
+.allScore a {
+  color: black;
+}
+
+.allScore {
+  padding: 5px;
+  margin-top: 10px;
+}
+/*jeux en mode normal*/
+
+.replaysection {
+  height: 150px;
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.replay {
+  cursor: url(images/high-five.png), pointer;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+.replay:focus {
+  outline: none;
+}
+.replay:hover {
+  cursor: url(images/high-five.png), pointer;
+}

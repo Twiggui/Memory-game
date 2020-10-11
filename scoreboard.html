@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreboard</title>
+
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./scoreboard.css" />
+
+    <!-- loading a burger menu icon for small screens-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="footer.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--Easier to style the whole page later on if we have a global wrapping div-->
+        <header class="topnav-wrapper">
+            <div class="topnav">
+                <!--Our main title, always links to the index/home page-->
+                <h1 class="active"><a href="index.html">HighFiveMemo</a></h1>
+                <!--h1 for SEO-->
+
+                <!-- Navigation links (hidden by default on mobile view, only seen when clicking on the burger menu -->
+                <div id="myLinks">
+                    <a href="index.html">Home</a>
+                    <a href="scoreboard.html">Scores</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="devTeam.html">Dev Team</a>
+                </div>
+
+                <!-- Burger menu -->
+                <a href="javascript:void(0);" class="icon">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </header>
+
+        <!--Content-->
+        <div class="content-wrapper">
+            <h2>High scores</h2>
+            <section class="scoreboard">
+                <!--Example of a score line but most of the HTML will probably be injected via JS?-->
+                <div class="score-wrapper">
+                    <p class="recordText">RECORD</p>
+                    <div class="ranking">
+                        <!-- <p class="number1">1</p> -->
+
+                        <p class="date">-----</p>
+                        <p class="score recordScore">-----</p>
+                    </div>
+
+                    <!--Record score-->
+                </div>
+
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number2">2</p>
+                        <p class="date">-----</p>
+                        <!--Date of the score-->
+                    </div>
+                    <p class="score">-----</p>
+                    <!--Score-->
+                </div>
+
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number3">3</p>
+                        <p class="date">-----</p>
+                        <!--Date of the score-->
+                    </div>
+                    <p class="score">-----</p>
+                    <!--Score-->
+                </div>
+
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number4">4</p>
+                        <p class="date">-----</p>
+                        <!--Date of the score-->
+                    </div>
+                    <p class="score">-----</p>
+                    <!--Score-->
+                </div>
+
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number5">5</p>
+                        <p class="date">-----</p>
+                        <!--Date of the score-->
+                    </div>
+                    <p class="score">-----</p>
+                    <!--Score-->
+                </div>
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number6">6</p>
+                        <p class="date">-----</p>
+                    </div>
+                    <p class="score recordScore">-----</p>
+                    <!--Record score-->
+                </div>
+
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number7">7</p>
+                        <p class="date">-----</p>
+                        <!--Date of the score-->
+                    </div>
+                    <p class="score">-----</p>
+                    <!--Score-->
+                </div>
+
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number8">8</p>
+                        <p class="date">-----</p>
+                        <!--Date of the score-->
+                    </div>
+                    <p class="score">-----</p>
+                    <!--Score-->
+                </div>
+
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number9">9</p>
+                        <p class="date">-----</p>
+                        <!--Date of the score-->
+                    </div>
+                    <p class="score">-----</p>
+                    <!--Score-->
+                </div>
+
+                <div class="score-wrapper">
+                    <div class="ranking">
+                        <p class="number10">10</p>
+                        <p class="date">-----</p>
+                        <!--Date of the score-->
+                    </div>
+                    <p class="score">-----</p>
+                    <!--Score-->
+                </div>
+            </section>
+
+            <div class="currentScore"></div>
+            <!--Not using an actual button because they're annnoying to style in css-->
+            <div class="button"><a href="game.html">Play again!</a></div>
+        </div>
+    </div>
+    <footer>
+        <p class="p-footer">
+            HighFiveMemo by
+            <a href="devTeam.html" class="aFooter">Team HighFive</a> <span class="span-12"> - Website
+                created on October, 9 2020</span> - <a href="http://www.freepik.com">Background image by slidesgo /
+                Freepik</a>
+        </p>
+    </footer>
+    <script type="text/javascript" src="header.js"></script>
+    <script type="text/javascript" src="scoreboard.js"></script>
+</body>
+
+</html>

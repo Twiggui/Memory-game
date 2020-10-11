@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="lang">
+
+<head>
+  <meta charset="utf-8" />
+  <title>HighFiveMemo - Home</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="topnav-wrapper">
+      <div class="topnav">
+        <!--Our main title, always links to the index/home page-->
+        <h1 class="active"><a href="index.html">HighFiveMemo</a></h1>
+        <!--h1 for SEO-->
+
+        <!-- Navigation links (hidden by default on mobile view, only seen when clicking on the burger menu -->
+        <div id="myLinks">
+          <a href="index.html" class="span-1">Home</a>
+          <a href="scoreboard.html">Scores</a>
+          <a href="contact.html">Contact</a>
+          <a href="devTeam.html">Dev Team</a>
+        </div>
+
+        <!-- Burger menu -->
+        <a href="javascript:void(0);" class="icon">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="line-toggle-bar">
+        <div class="toggle-bar">
+          <div class="toggle-lang">EN</div>
+          <div class="toggle-space">
+            <div class="toggle-button"></div>
+          </div>
+          <div class="toggle-lang">FR</div>
+        </div>
+      </div>
+      <section class="enterPseudo">
+        <label for="pseudo" class="span-2">Enter your pseudo </label>
+        <input id="pseudo" type="text" name="pseudo" placeholder=" Anonymous" />
+      </section>
+
+      <div class="central">
+        <div class="Rules">
+          <label for="rules_games" class="span-3">Rules of the game </label><br />
+          <p class="rules">
+            <span class="span-4">You have cards face down. The aim is to find the even cards within
+              the time limit. </span><br /><br /><span class="span-5">Click on a card to flip it over and find
+              its twin. If you find the pair, the cards remain face up and you can
+              continue. </span><br />
+            <span class="span-6">If you make a mistake, the last 2 cards turned over become hidden
+              again. </span><br /><br /><span class="span-7">Increase the difficulty if you want to add pairs
+              of cards. Your score will be calculated according to the level of
+              difficulty and the time taken.</span>
+          </p>
+        </div>
+        <div class="video">
+                      <iframe width="400" height="300" src="https://www.youtube.com/embed/izUUUr-iiQU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+      <div class="settings">
+        <p class="settings_title"><span class="span-8">Select a difficulty mode :</span></p>
+        <br />
+
+        <div>
+          <input type="radio" class="difficulty" name="difficulty" value="noob" />
+          <label for="noob" class="span-setting">Noob</label>
+        </div>
+
+        <br />
+        <div>
+          <input type="radio" class="difficulty" name="difficulty" value="easy" />
+          <label for="easy" class="span-setting">Easy</label>
+        </div>
+
+        <br />
+
+        <div>
+          <input type="radio" class="difficulty" name="difficulty" value="normal" />
+          <label for="normal" class="span-setting">Normal</label>
+        </div>
+
+        <br />
+
+        <div>
+          <input type="radio" class="difficulty" name="difficulty" value="hard" />
+          <label for="hard" class="span-setting">Hard</label>
+        </div>
+
+    </main>
+
+    <div class="button"><a href="game.html" class="span-11">Let's Play !!</a></div>
+    <div class="alert">You need to select a difficulty level</div>
+  </div>
+  <footer>
+    <p class="p-footer">
+      HighFiveMemo by
+      <a href="devTeam.html" class="aFooter">Team HighFive</a> <span class="span-12"> - Website
+        created on October, 9 2020</span> - <a href="http://www.freepik.com">Background image by slidesgo / Freepik</a>
+    </p>
+  </footer>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
